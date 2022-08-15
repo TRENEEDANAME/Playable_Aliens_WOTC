@@ -1,0 +1,492 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Default" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Guid>7d7f9a7c-1791-4e03-bee2-2587b3d0b48e</Guid>
+    <Name>Playable_Aliens_WOTC</Name>
+    <Description>Description of My XCOM 2 Mod.</Description>
+    <SteamPublishID>0</SteamPublishID>
+    <AssemblyName>Playable_Aliens_WOTC</AssemblyName>
+    <RootNamespace>Playable_Aliens_WOTC</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Config\" />
+    <Folder Include="Localization\" />
+    <Folder Include="Content" />
+    <Folder Include="ContentForCook" />
+    <Folder Include="Src\" />
+    <Folder Include="Src\Playable_Aliens_WOTC\" />
+    <Folder Include="Src\Playable_Aliens_WOTC\Classes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\XComAbilityEditor.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComAbilityToSlotReassignment.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComAI.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComAlienGearCosts.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComAlliesUnknown.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComClassData.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComContent.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XcomEncounterLists.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComEncounters.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComGameBoard.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComGameData.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComGameData_CharacterStats.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComGameData_WeaponData.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComLW_AlienPack.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComMissionDefs.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComMissionSources.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComMZChemthrower.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComNew2020Icons.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XcomPAAnims.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComPlayableAdvent.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComPromotionUIMod.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComRepurposeAbilities.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComSchedules.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComTemplateCreator.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComTemplateEditor.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComViperSkills.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComWeaponSkinReplacer.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ContentForCook\ChimeraResonant.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ContentForCook\PA_Andromedon_ANIM.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ContentForCook\PA_Archon_ANIM.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ContentForCook\PA_Berserker_ANIM.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ContentForCook\PA_Muton_ANIM.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ContentForCook\PA_Naja.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ContentForCook\PA_Naja_ANIM.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ContentForCook\PA_Sectoid_Anim.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ContentForCook\PA_SideWinder.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ContentForCook\PA_Sidewinder_ANIM.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ContentForCook\PA_VIPER_ANIM.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ContentForCook\PA_VIPER_Melee.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ContentForCook\PlayableXCOM2AliensLWOTC_ModShaderCache.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ContentForCook\UILibrary_PlayableAdvent.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ContentForCook\UILibrary_PlayableAliensClasses.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ContentOptions.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Localization\AlliesUnknownRedux.int">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Localization\Playable_Aliens_WOTC.int">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ReadMe.txt" />
+    <Content Include="ModPreview.jpg" />
+    <Content Include="Config\XComEditor.ini" />
+    <Content Include="Config\XComEngine.ini" />
+    <Content Include="Config\XComGame.ini" />
+    <Content Include="Localization\XComGame.int" />
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\AmmoRestriction.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\AnimUpdate.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\BitterfrostHelper.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\Examples.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\GrenadeRestriction.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\LWTuple.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\OPTC_Bind.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\OPTC_BlazingPinions.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\OPTC_BlazingPinionsBurn.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\OPTC_BungeeSlime.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\OPTC_ChosenKidnap.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\OPTC_CoverMe.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\OPTC_FacelessRegen.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\OPTC_FrostCorress.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\OPTC_FrostCounterattack.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\OPTC_FrostLegionWeapons.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\OPTC_GetOverHere.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\OPTC_MutonHarrierLauncher.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\OPTC_PsiReanimation.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\OPTC_ReanimateFrostZombie.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\OPTC_RushAndBind.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\OPTC_SectoidPsi.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\OPTC_ThrowGrenade.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\PA_Condition_BattleSuitGolem.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\PA_MoltCondition.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\UICustomize_AlienInfo.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\UICustomize_AlienMenu.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\UIEventNoticesTactical_Ripple.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\UIUtilities_Image_Ripple.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\WOTC_APA_Class_Utilities_Effects.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\X2AbilityCooldown_CoverMe_PA.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\X2AbilityCooldown_FrostCorress.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\X2AbilityCooldown_MassMindspin_PA.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\X2AbilityCooldown_Mindspin_PA.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\X2AbilityCooldown_OnHitOnly.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\X2AbilityCooldown_PsiReanimation_PA.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\X2AbilityCooldown_ReanimateFrostZombie.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\X2AbilityCooldown_ThrowGrenade_PA.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\X2AbilitySet_Aliens.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\X2Ability_FrostDivisionChill.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\X2Action_DLC_Day60IcarusDropGrab.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\X2Action_DLC_Day60IcarusDropRelease.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\X2Action_DLC_Day60IcarusDropRelease_Target.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\X2Action_DLC_Day60IcarusDropSlam.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\X2Character_PlayableAliens.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\X2Condition_IsTooHeavyForPull.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\X2Condition_NotItsOwnTurn.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\X2Condition_PrimaryWeapon.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\X2Condition_WOTC_APA_Class_ValidWeaponCategory.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\X2DownloadableContentInfo_Playable_Aliens_WOTC.uc" />
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\X2Effect_AddGrenade.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\X2Effect_AddOverwatchActionPoints.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\X2Effect_AreaSuppression.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\X2Effect_GrantReserveActionPoint.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\X2Effect_HeavyHitter.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\X2Effect_PADangerZone.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\X2Effect_PASlugShot.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\X2Effect_PAStreetSweeper.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\X2Effect_PsiRipple.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\X2Effect_PullAlly.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\X2Effect_RussianRoulette.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\X2Effect_SpawnBattleSuitGolem.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\X2Effect_WOTC_APA_Class_AddAbilitiesToTarget.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\X2EventListener_AlienCapture.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\X2Item_PAArmors.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\X2Item_PAWeapons.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\X2StatusEffects_RipplingRifle.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\X2StrategyElement_AlienCountries.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\X2StrategyElement_AlienCovertActions.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\X2StrategyElement_AlienRewards.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\XComGameState_Unit_DumbExtension.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\XGCharacterGenerator_PlayableAliens.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\XMBAbility.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\XMBAbilityTrigger_EventListener.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\XMBCondition_AbilityCost.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\XMBCondition_AbilityHitResult.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\XMBCondition_AbilityName.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\XMBCondition_AbilityProperty.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\XMBCondition_Concealed.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\XMBCondition_CoverType.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\XMBCondition_Dead.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\XMBCondition_HeightAdvantage.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\XMBCondition_MatchingWeapon.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\XMBCondition_ReactionFire.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\XMBCondition_SourceAbilities.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\XMBCondition_WeaponName.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\XMBConfig.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\XMBEffectInterface.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\XMBEffectUtilities.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\XMBEffect_AbilityCostRefund.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\XMBEffect_AddAbility.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\XMBEffect_AddAbilityCharges.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\XMBEffect_AddItemCharges.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\XMBEffect_AddUtilityItem.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\XMBEffect_BonusDamageByDamageType.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\XMBEffect_BonusRadius.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\XMBEffect_ChangeHitResultForAttacker.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\XMBEffect_ConditionalBonus.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\XMBEffect_ConditionalStatChange.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\XMBEffect_DoNotConsumeAllPoints.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\XMBEffect_Extended.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\XMBEffect_GrantReserveActionPoint.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\XMBEffect_PermanentStatChange.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\XMBEffect_RevealUnit.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\XMBEffect_ToHitModifierByRange.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\XMBTemplateUtilities.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\XMBValue.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\XMBValue_Distance.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\XMBValue_UnitValue.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\XMBValue_Visibility.uc">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildLocalExtensionPath)\XCOM2.targets" />
+</Project>

@@ -1,0 +1,19 @@
+{
+    "sfStandalone": [
+        "ChimeraResonant",
+		"PA_Andromedon_ANIM",
+        "PA_Archon_ANIM",
+        "PA_Berserker_ANIM",
+        "PA_Muton_ANIM",
+        "PA_Naja_ANIM",
+        "PA_Naja",
+        "PA_Sectoid_Anim",
+        "PA_Sidewinder_ANIM",
+        "PA_SideWinder",
+        "PA_VIPER_ANIM",
+        "PA_VIPER_Melee",
+        "PlayableXCOM2AliensLWOTC_ModShaderCache",
+        "UILibrary_PlayableAdvent",
+        "UILibrary_PlayableAliensClasses"
+    ]
+}
