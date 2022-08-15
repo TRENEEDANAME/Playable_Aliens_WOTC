@@ -7,7 +7,19 @@
     <SteamPublishID>0</SteamPublishID>
     <AssemblyName>Playable_Aliens_WOTC</AssemblyName>
     <RootNamespace>Playable_Aliens_WOTC</RootNamespace>
+    <ProjectGuid>{06791a2d-23f1-40f1-804b-fa8604d02717}</ProjectGuid>
   </PropertyGroup>
+  <PropertyGroup>
+    <SolutionRoot>$(MSBuildProjectDirectory)\..\</SolutionRoot>
+    <ScriptsDir>$(SolutionRoot).scripts\</ScriptsDir>
+    <BuildCommonRoot>$(ScriptsDir)X2ModBuildCommon\</BuildCommonRoot>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SolutionRoot>$(MSBuildProjectDirectory)\..\</SolutionRoot>
+    <ScriptsDir>$(SolutionRoot).scripts\</ScriptsDir>
+    <BuildCommonRoot>$(ScriptsDir)X2ModBuildCommon\</BuildCommonRoot>
+  </PropertyGroup>
+  <Import Project="$(BuildCommonRoot)XCOM2.targets" />
   <ItemGroup>
     <Folder Include="Config\" />
     <Folder Include="Localization\" />
@@ -16,8 +28,7 @@
     <Folder Include="Src\" />
     <Folder Include="Src\Playable_Aliens_WOTC\" />
     <Folder Include="Src\Playable_Aliens_WOTC\Classes\" />
-  </ItemGroup>
-  <ItemGroup>
+    <Folder Include="ContentForCook\" />
     <Content Include="Config\XComAbilityEditor.ini">
       <SubType>Content</SubType>
     </Content>
@@ -487,6 +498,7 @@
     <Content Include="Src\Playable_Aliens_WOTC\Classes\XMBValue_Visibility.uc">
       <SubType>Content</SubType>
     </Content>
+    <Content Include=".gitignore" />
+    <Content Include="Config\XComInfiltration.ini" />
   </ItemGroup>
-  <Import Project="$(MSBuildLocalExtensionPath)\XCOM2.targets" />
 </Project>

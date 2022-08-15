@@ -120,13 +120,6 @@ static function GiveAlienRescueReward(XComGameState NewGameState, XComGameState_
 	if (default.bReward_Sectoid ) 		{ RewardNames.AddItem('Reward_Sectoid'); 	}
 	if (default.bReward_Viper ) 		{ RewardNames.AddItem('Reward_Viper');		}
 
-	//add lwotc
-	if (class'X2DownloadableContentInfo_Playable_Aliens_WOTC'.static.IsModActive('LongWarOfTheChosen') )
-	{
-		if (default.bReward_Naja ) 				{ RewardNames.AddItem('Reward_Naja');				}
-		if (default.bReward_Sidewinder ) 		{ RewardNames.AddItem('Reward_Sidewinder');			}
-	}
-
 	//add claus mutons
 	if (class'X2DownloadableContentInfo_Playable_Aliens_WOTC'.static.IsModActive('MutonHarriers') )
 	{

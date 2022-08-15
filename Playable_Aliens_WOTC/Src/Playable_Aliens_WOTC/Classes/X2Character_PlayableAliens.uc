@@ -448,10 +448,7 @@ static function X2CharacterTemplate CreateTemplate_Andromedon()
 	CharTemplate.Abilities.AddItem('WallSmash');
 	//CharTemplate.Abilities.AddItem('RobotBattlesuit');
 	//CharTemplate.Abilities.AddItem('ShellLauncher');
-	if (class'X2DownloadableContentInfo_Playable_Aliens_WOTC'.static.IsModActive('WotC_Gameplay_GeneModding'))
-    {
-	CharTemplate.Abilities.AddItem('IRI_SecondaryHeart');
-	}
+
 
 	CharTemplate.Abilities.AddItem('Loot');
 	CharTemplate.Abilities.AddItem('Interact_PlantBomb');
