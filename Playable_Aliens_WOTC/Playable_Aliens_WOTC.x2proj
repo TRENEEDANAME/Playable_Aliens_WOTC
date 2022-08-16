@@ -24,11 +24,9 @@
     <Folder Include="Config\" />
     <Folder Include="Localization\" />
     <Folder Include="Content" />
-    <Folder Include="ContentForCook" />
     <Folder Include="Src\" />
     <Folder Include="Src\Playable_Aliens_WOTC\" />
     <Folder Include="Src\Playable_Aliens_WOTC\Classes\" />
-    <Folder Include="ContentForCook\" />
     <Content Include="Config\XComAbilityEditor.ini">
       <SubType>Content</SubType>
     </Content>
@@ -110,52 +108,46 @@
     <Content Include="Config\XComWeaponSkinReplacer.ini">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="ContentForCook\ChimeraResonant.upk">
+    <Content Include="Content\ChimeraResonant.upk">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="ContentForCook\PA_Andromedon_ANIM.upk">
+    <Content Include="Content\PA_Andromedon_ANIM.upk">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="ContentForCook\PA_Archon_ANIM.upk">
+    <Content Include="Content\PA_Archon_ANIM.upk">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="ContentForCook\PA_Berserker_ANIM.upk">
+    <Content Include="Content\PA_Berserker_ANIM.upk">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="ContentForCook\PA_Muton_ANIM.upk">
+    <Content Include="Content\PA_Muton_ANIM.upk">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="ContentForCook\PA_Naja.upk">
+    <Content Include="Content\PA_Naja.upk">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="ContentForCook\PA_Naja_ANIM.upk">
+    <Content Include="Content\PA_Naja_ANIM.upk">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="ContentForCook\PA_Sectoid_Anim.upk">
+    <Content Include="Content\PA_Sectoid_Anim.upk">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="ContentForCook\PA_SideWinder.upk">
+    <Content Include="Content\PA_SideWinder.upk">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="ContentForCook\PA_Sidewinder_ANIM.upk">
+    <Content Include="Content\PA_Sidewinder_ANIM.upk">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="ContentForCook\PA_VIPER_ANIM.upk">
+    <Content Include="Content\PA_VIPER_ANIM.upk">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="ContentForCook\PA_VIPER_Melee.upk">
+    <Content Include="Content\PA_VIPER_Melee.upk">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="ContentForCook\PlayableXCOM2AliensLWOTC_ModShaderCache.upk">
+    <Content Include="Content\UILibrary_PlayableAdvent.upk">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="ContentForCook\UILibrary_PlayableAdvent.upk">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="ContentForCook\UILibrary_PlayableAliensClasses.upk">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="ContentOptions.json">
+    <Content Include="Content\UILibrary_PlayableAliensClasses.upk">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Localization\AlliesUnknownRedux.int">
