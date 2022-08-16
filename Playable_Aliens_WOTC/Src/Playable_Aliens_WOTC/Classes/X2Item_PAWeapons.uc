@@ -1,7 +1,7 @@
 class X2Item_PAWeapons extends X2Item config(GameData_WeaponData);
 
 //* -------------------------------------------------------
-//* Standard Rifle
+//* Damage for all standard Rifle
 //* -------------------------------------------------------
 
 var config WeaponDamageValue VIPERRIFLE_Laser_BaseDamage;
@@ -101,6 +101,8 @@ var config int MUTONHARRIERLAUNCHER_BEAM_IENVIRONMENTDAMAGE;
 //* Viper weapons
 //* ===========================================================================
 
+var config int PA_ViperTongueAim;
+
 //* -------------------------------------------------------
 //* SideWinder Rifle
 //* -------------------------------------------------------
@@ -148,64 +150,108 @@ var config int NAJAGUN_MAGNETIC_IENVIRONMENTDAMAGE;
 var config int NAJAGUN_COIL_IENVIRONMENTDAMAGE;
 var config int NAJAGUN_BEAM_IENVIRONMENTDAMAGE;
 
+//* -------------------------------------------------------
+//* Frost Adder Rifle
+//* -------------------------------------------------------
 
-var config int FROSTADDERGUN_AIM;
-var config int FROSTADDERGUN_CRITCHANCE;
-var config int FROSTADDERGUN_ICLIPSIZE;
-var config int FROSTADDERGUN_ISOUNDRANGE;
-var config array<int> FROSTADDERGUN_RANGE;
-var config int FROSTADDERGUN_CONVENTIONAL_IENVIRONMENTDAMAGE;
-var config int FROSTADDERGUN_LASER_IENVIRONMENTDAMAGE;
-var config int FROSTADDERGUN_MAGNETIC_IENVIRONMENTDAMAGE;
-var config int FROSTADDERGUN_COIL_IENVIRONMENTDAMAGE;
-var config int FROSTADDERGUN_BEAM_IENVIRONMENTDAMAGE;
 var config WeaponDamageValue FROSTADDERGUN_CONVENTIONAL_BASEDAMAGE;
 var config WeaponDamageValue FROSTADDERGUN_LASER_BASEDAMAGE;
 var config WeaponDamageValue FROSTADDERGUN_MAGNETIC_BASEDAMAGE;
 var config WeaponDamageValue FROSTADDERGUN_COIL_BASEDAMAGE;
 var config WeaponDamageValue FROSTADDERGUN_BEAM_BASEDAMAGE;
 
-var config int FROSTBOMBERGUN_AIM;
-var config int FROSTBOMBERGUN_CRITCHANCE;
-var config int FROSTBOMBERGUN_ICLIPSIZE;
-var config int FROSTBOMBERGUN_ISOUNDRANGE;
-var config array<int> FROSTBOMBERGUN_RANGE;
-var config int FROSTBOMBERGUN_CONVENTIONAL_IENVIRONMENTDAMAGE;
-var config int FROSTBOMBERGUN_LASER_IENVIRONMENTDAMAGE;
-var config int FROSTBOMBERGUN_MAGNETIC_IENVIRONMENTDAMAGE;
-var config int FROSTBOMBERGUN_COIL_IENVIRONMENTDAMAGE;
-var config int FROSTBOMBERGUN_BEAM_IENVIRONMENTDAMAGE;
+var config array<WeaponDamageValue> FrostAdder_M1_BindDamage;
+var config array<WeaponDamageValue> FrostAdder_M2_BindDamage;
+var config array<WeaponDamageValue> FrostAdder_M3_BindDamage;
+
+var config WeaponDamageValue FrostAdder_M1_TailDamage;
+var config WeaponDamageValue FrostAdder_M2_TailDamage;
+var config WeaponDamageValue FrostAdder_M3_TailDamage;
+
+var config array<int> FROSTADDERGUN_RANGE;
+
+var config int FROSTADDERGUN_AIM;
+var config int FROSTADDERGUN_CRITCHANCE;
+var config int FROSTADDERGUN_ICLIPSIZE;
+var config int FROSTADDERGUN_ISOUNDRANGE;
+var config int FROSTADDERGUN_CONVENTIONAL_IENVIRONMENTDAMAGE;
+var config int FROSTADDERGUN_LASER_IENVIRONMENTDAMAGE;
+var config int FROSTADDERGUN_MAGNETIC_IENVIRONMENTDAMAGE;
+var config int FROSTADDERGUN_COIL_IENVIRONMENTDAMAGE;
+var config int FROSTADDERGUN_BEAM_IENVIRONMENTDAMAGE;
+
+//* -------------------------------------------------------
+//* Frost bomber Rifle
+//* -------------------------------------------------------
+
 var config WeaponDamageValue FROSTBOMBERGUN_CONVENTIONAL_BASEDAMAGE;
 var config WeaponDamageValue FROSTBOMBERGUN_LASER_BASEDAMAGE;
 var config WeaponDamageValue FROSTBOMBERGUN_MAGNETIC_BASEDAMAGE;
 var config WeaponDamageValue FROSTBOMBERGUN_COIL_BASEDAMAGE;
 var config WeaponDamageValue FROSTBOMBERGUN_BEAM_BASEDAMAGE;
 
-var config WeaponDamageValue MUTON_BAYONET_BASEDAMAGE;
-var config WeaponDamageValue MUTON_ELITEBAYONET_BASEDAMAGE;
-
 var config WeaponDamageValue FROSTBOMBER_BAYONET_BASEDAMAGE;
 var config WeaponDamageValue FROSTBOMBER_ELITEBAYONET_BASEDAMAGE;
 
-var config WeaponDamageValue PA_FROSTBLOB_BASEDAMAGE;
+var config array<int> FROSTBOMBERGUN_RANGE;
 
-var config WeaponDamageValue ARCHON_BAYONET_BASEDAMAGE;
-var config WeaponDamageValue ARCHON_ELITEBAYONET_BASEDAMAGE;
+var config int FROSTBOMBERGUN_AIM;
+var config int FROSTBOMBERGUN_CRITCHANCE;
+var config int FROSTBOMBERGUN_ICLIPSIZE;
+var config int FROSTBOMBERGUN_ISOUNDRANGE;
+var config int FROSTBOMBERGUN_CONVENTIONAL_IENVIRONMENTDAMAGE;
+var config int FROSTBOMBERGUN_LASER_IENVIRONMENTDAMAGE;
+var config int FROSTBOMBERGUN_MAGNETIC_IENVIRONMENTDAMAGE;
+var config int FROSTBOMBERGUN_COIL_IENVIRONMENTDAMAGE;
+var config int FROSTBOMBERGUN_BEAM_IENVIRONMENTDAMAGE;
 
-var config WeaponDamageValue AndromedonRifle_Laser_BaseDamage;
-var config WeaponDamageValue AndromedonRifle_Coil_BaseDamage;
+var config WeaponDamageValue MUTON_BAYONET_BASEDAMAGE;
+var config WeaponDamageValue MUTON_ELITEBAYONET_BASEDAMAGE;
 
-var config WeaponDamageValue SECTOIDBLASTER_CONVENTIONAL_BASEDAMAGE;
-var config WeaponDamageValue SECTOIDBLASTER_LASER_BASEDAMAGE;
-var config WeaponDamageValue SECTOIDBLASTER_MAGNETIC_BASEDAMAGE;
-var config WeaponDamageValue SECTOIDBLASTER_COIL_BASEDAMAGE;
-var config WeaponDamageValue SECTOIDBLASTER_BEAM_BASEDAMAGE;
+//* -------------------------------------------------------
+//* Frost Necromencer rifle
+//* -------------------------------------------------------
 
 var config WeaponDamageValue FROSTNECROMANCERBLASTER_CONVENTIONAL_BASEDAMAGE;
 var config WeaponDamageValue FROSTNECROMANCERBLASTER_LASER_BASEDAMAGE;
 var config WeaponDamageValue FROSTNECROMANCERBLASTER_MAGNETIC_BASEDAMAGE;
 var config WeaponDamageValue FROSTNECROMANCERBLASTER_COIL_BASEDAMAGE;
 var config WeaponDamageValue FROSTNECROMANCERBLASTER_BEAM_BASEDAMAGE;
+
+//* -------------------------------------------------------
+//* Frost Blob
+//* -------------------------------------------------------
+
+var config WeaponDamageValue PA_FROSTBLOB_BASEDAMAGE;
+
+var config int PA_FrostBlobRange;
+var config int PA_FrostBlobRadius;
+var config int PA_FrostBlobClipSize;
+var config int PA_FrostBlobSoundRange;
+
+//* -------------------------------------------------------
+//* Archon Bayonet
+//* -------------------------------------------------------
+
+var config WeaponDamageValue ARCHON_BAYONET_BASEDAMAGE;
+var config WeaponDamageValue ARCHON_ELITEBAYONET_BASEDAMAGE;
+
+//* -------------------------------------------------------
+//* Andromedon Rifle
+//* -------------------------------------------------------
+
+var config WeaponDamageValue AndromedonRifle_Laser_BaseDamage;
+var config WeaponDamageValue AndromedonRifle_Coil_BaseDamage;
+
+//* -------------------------------------------------------
+//* Sectoid Rifle
+//* -------------------------------------------------------
+
+var config WeaponDamageValue SECTOIDBLASTER_CONVENTIONAL_BASEDAMAGE;
+var config WeaponDamageValue SECTOIDBLASTER_LASER_BASEDAMAGE;
+var config WeaponDamageValue SECTOIDBLASTER_MAGNETIC_BASEDAMAGE;
+var config WeaponDamageValue SECTOIDBLASTER_COIL_BASEDAMAGE;
+var config WeaponDamageValue SECTOIDBLASTER_BEAM_BASEDAMAGE;
 
 var config array <WeaponDamageValue> T1_SECTOID_PSIAMP_EXTRA_DAMAGE;
 var config array <WeaponDamageValue> T2_SECTOID_PSIAMP_EXTRA_DAMAGE;
@@ -215,20 +261,17 @@ var config int LASERWEAPONAIMBONUS;
 
 var config array<int> LMG_ALL_RANGE;
 
+//* -------------------------------------------------------
+//* Poison / Frost Blob
+//* -------------------------------------------------------
+
+var config WeaponDamageValue PA_FrostSpitGlob_Damage;
+
 var config int PoisonSpitRadius;
 var config int PoisonSpitRange;
 var config int FrostSpitRadius;
 var config int FrostSpitRange;
-var config WeaponDamageValue PA_FrostSpitGlob_Damage;
-var config int PA_ViperTongueAim;
 
-var config array<WeaponDamageValue> FrostAdder_M1_BindDamage;
-var config array<WeaponDamageValue> FrostAdder_M2_BindDamage;
-var config array<WeaponDamageValue> FrostAdder_M3_BindDamage;
-
-var config WeaponDamageValue FrostAdder_M1_TailDamage;
-var config WeaponDamageValue FrostAdder_M2_TailDamage;
-var config WeaponDamageValue FrostAdder_M3_TailDamage;
 
 var config(AlienGearCosts) int LASER_ALIEN_GUN_BLACKMARKET_VALUE;
 var config(AlienGearCosts) array<name> LASER_ALIEN_GUN_REQUIRED_TECHS;
@@ -367,11 +410,6 @@ var config(AlienGearCosts) array<name> BEAM_ARCHON_BAYONET_REQUIRED_TECHS;
 var config(AlienGearCosts) array<name> BEAM_ARCHON_BAYONET_BUILD_COST_TYPE;
 var config(AlienGearCosts) array<int> BEAM_ARCHON_BAYONET_BUILD_COST_QUANTITY;
 var config(AlienGearCosts) int BEAM_ARCHON_BAYONET_ENGINEERING_SCORE;
-
-var config int PA_FrostBlobRange;
-var config int PA_FrostBlobRadius;
-var config int PA_FrostBlobClipSize;
-var config int PA_FrostBlobSoundRange;
 
 static function array<X2DataTemplate> CreateTemplates()
 {
