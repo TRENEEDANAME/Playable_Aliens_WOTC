@@ -617,7 +617,7 @@ var config(AlienGearCosts) int BEAM_ARCHON_BAYONET_ENGINEERING_SCORE;
 static function array<X2DataTemplate> CreateTemplates()
 {
 	local array<X2DataTemplate> ModWeapons;
-	ModWeapons.AddItem(CreateTemplate_PA_ArchonGun());
+	ModWeapons.AddItem(CreateTemplate_PA_ArchonGunCV());
 	ModWeapons.AddItem(CreateTemplate_PA_ArchonGunLaser());
 	ModWeapons.AddItem(CreateTemplate_PA_ArchonGunMagnetic());
 	ModWeapons.AddItem(CreateTemplate_PA_ArchonGunCoil());
@@ -626,17 +626,17 @@ static function array<X2DataTemplate> CreateTemplates()
 	ModWeapons.AddItem(CreateTemplate_PA_ArchonEliteBayonet());
 	ModWeapons.AddItem(CreateTemplate_PA_ArchonPinions());
 
-	ModWeapons.AddItem(CreateTemplate_PA_SectoidGun());
+	ModWeapons.AddItem(CreateTemplate_PA_SectoidGunCV());
 	ModWeapons.AddItem(CreateTemplate_PA_SectoidGunLaser());
 	ModWeapons.AddItem(CreateTemplate_PA_SectoidGunMagnetic());
 	ModWeapons.AddItem(CreateTemplate_PA_SectoidGunCoil());
 	ModWeapons.AddItem(CreateTemplate_PA_SectoidGunBeam());
 	
-	ModWeapons.AddItem(CreateSectoid_Amp());
+	ModWeapons.AddItem(CreateSectoid_Amp_CV());
 	ModWeapons.AddItem(CreateSectoid_Amp_MG());
 	ModWeapons.AddItem(CreateSectoid_Amp_BM());
 
-	ModWeapons.AddItem(CreateTemplate_PA_ViperGun());
+	ModWeapons.AddItem(CreateTemplate_PA_ViperGunCV());
 	ModWeapons.AddItem(CreateTemplate_PA_ViperGunLaser());
 	ModWeapons.AddItem(CreateTemplate_PA_ViperGunMagnetic());
 	ModWeapons.AddItem(CreateTemplate_PA_ViperGunCoil());
@@ -646,52 +646,52 @@ static function array<X2DataTemplate> CreateTemplates()
 	ModWeapons.AddItem(CreateTemplate_PA_PoisonSpitGlob());
 	ModWeapons.AddItem(CreateTemplate_PA_FrostSpitGlob());
 
-	ModWeapons.AddItem(CreateTemplate_PA_MutonGun());
+	ModWeapons.AddItem(CreateTemplate_PA_MutonGunCV());
 	ModWeapons.AddItem(CreateTemplate_PA_MutonGunLaser());
 	ModWeapons.AddItem(CreateTemplate_PA_MutonGunMagnetic());
 	ModWeapons.AddItem(CreateTemplate_PA_MutonGunCoil());
 	ModWeapons.AddItem(CreateTemplate_PA_MutonGunBeam());
 
-	ModWeapons.AddItem(CreateTemplate_PA_MutonBayonet());
+	ModWeapons.AddItem(CreateTemplate_PA_MutonBayonetCV());
 	ModWeapons.AddItem(CreateTemplate_PA_MutonEliteBayonet());
 
-	ModWeapons.AddItem(CreateTemplate_PA_MutonCannon());
+	ModWeapons.AddItem(CreateTemplate_PA_MutonCannonCV());
 	ModWeapons.AddItem(CreateTemplate_PA_MutonCannonLaser());
 	ModWeapons.AddItem(CreateTemplate_PA_MutonCannonMagnetic());
 	ModWeapons.AddItem(CreateTemplate_PA_MutonCannonCoil());
 	ModWeapons.AddItem(CreateTemplate_PA_MutonCannonBeam());
 
-	ModWeapons.AddItem(CreateTemplate_PA_MutonHarrierLauncher());
+	ModWeapons.AddItem(CreateTemplate_PA_MutonHarrierLauncherCV());
 	ModWeapons.AddItem(CreateTemplate_PA_MutonHarrierLauncherLaser());
 	ModWeapons.AddItem(CreateTemplate_PA_MutonHarrierLauncherMagnetic());
 	ModWeapons.AddItem(CreateTemplate_PA_MutonHarrierLauncherCoil());
 	ModWeapons.AddItem(CreateTemplate_PA_MutonHarrierLauncherBeam());
 
-	ModWeapons.AddItem(CreateTemplate_PA_MutonStalkerGun());
+	ModWeapons.AddItem(CreateTemplate_PA_MutonStalkerGunCV());
 	ModWeapons.AddItem(CreateTemplate_PA_MutonStalkerGunLaser());
 	ModWeapons.AddItem(CreateTemplate_PA_MutonStalkerGunMagnetic());
 	ModWeapons.AddItem(CreateTemplate_PA_MutonStalkerGunCoil());
 	ModWeapons.AddItem(CreateTemplate_PA_MutonStalkerGunBeam());
 
-	ModWeapons.AddItem(CreateTemplate_PA_MutonBeleaguerGun());
+	ModWeapons.AddItem(CreateTemplate_PA_MutonBeleaguerGunCV());
 	ModWeapons.AddItem(CreateTemplate_PA_MutonBeleaguerGunLaser());
 	ModWeapons.AddItem(CreateTemplate_PA_MutonBeleaguerGunMagnetic());
 	ModWeapons.AddItem(CreateTemplate_PA_MutonBeleaguerGunCoil());
 	ModWeapons.AddItem(CreateTemplate_PA_MutonBeleaguerGunBeam());
 
-	ModWeapons.AddItem(CreateTemplate_PA_SidewinderGun());
+	ModWeapons.AddItem(CreateTemplate_PA_SidewinderGunCV());
 	ModWeapons.AddItem(CreateTemplate_PA_SidewinderGunLaser());
 	ModWeapons.AddItem(CreateTemplate_PA_SidewinderGunMagnetic());
 	ModWeapons.AddItem(CreateTemplate_PA_SidewinderGunCoil());
 	ModWeapons.AddItem(CreateTemplate_PA_SidewinderGunBeam());
 
-	ModWeapons.AddItem(CreateTemplate_PA_NajaGun());
+	ModWeapons.AddItem(CreateTemplate_PA_NajaGunCV());
 	ModWeapons.AddItem(CreateTemplate_PA_NajaGunLaser());
 	ModWeapons.AddItem(CreateTemplate_PA_NajaGunMagnetic());
 	ModWeapons.AddItem(CreateTemplate_PA_NajaGunCoil());
 	ModWeapons.AddItem(CreateTemplate_PA_NajaGunBeam());
 
-	ModWeapons.AddItem(CreateTemplate_PA_AndromedonGun());
+	ModWeapons.AddItem(CreateTemplate_PA_AndromedonGunCV());
 	ModWeapons.AddItem(CreateTemplate_PA_AndromedonGunLaser());
 	ModWeapons.AddItem(CreateTemplate_PA_AndromedonGunMagnetic());
 	ModWeapons.AddItem(CreateTemplate_PA_AndromedonGunCoil());
@@ -699,7 +699,7 @@ static function array<X2DataTemplate> CreateTemplates()
 	ModWeapons.AddItem(CreateTemplate_PA_AcidBlob());
 	ModWeapons.AddItem(CreateTemplate_PA_FrostBlob());
 
-	ModWeapons.AddItem(CreateTemplate_PA_FrostAdderGun());
+	ModWeapons.AddItem(CreateTemplate_PA_FrostAdderGunCV());
 	ModWeapons.AddItem(CreateTemplate_PA_FrostAdderGunLaser());
 	ModWeapons.AddItem(CreateTemplate_PA_FrostAdderGunMagnetic());
 	ModWeapons.AddItem(CreateTemplate_PA_FrostAdderGunCoil());
@@ -709,7 +709,7 @@ static function array<X2DataTemplate> CreateTemplates()
 	ModWeapons.AddItem(CreateTemplate_PA_AdderTail_MG());
 	ModWeapons.AddItem(CreateTemplate_PA_AdderTail_BM());
 
-	ModWeapons.AddItem(CreateTemplate_PA_FrostBomberGun());
+	ModWeapons.AddItem(CreateTemplate_PA_FrostBomberGunCV());
 	ModWeapons.AddItem(CreateTemplate_PA_FrostBomberGunLaser());
 	ModWeapons.AddItem(CreateTemplate_PA_FrostBomberGunMagnetic());
 	ModWeapons.AddItem(CreateTemplate_PA_FrostBomberGunCoil());
@@ -718,7 +718,7 @@ static function array<X2DataTemplate> CreateTemplates()
 	ModWeapons.AddItem(CreateTemplate_PA_FrostBomberBayonet());
 	ModWeapons.AddItem(CreateTemplate_PA_FrostBomberEliteBayonet());
 
-	ModWeapons.AddItem(CreateTemplate_PA_FrostNecromancerGun());
+	ModWeapons.AddItem(CreateTemplate_PA_FrostNecromancerGunCV());
 	ModWeapons.AddItem(CreateTemplate_PA_FrostNecromancerGunLaser());
 	ModWeapons.AddItem(CreateTemplate_PA_FrostNecromancerGunMagnetic());
 	ModWeapons.AddItem(CreateTemplate_PA_FrostNecromancerGunCoil());
@@ -728,11 +728,11 @@ static function array<X2DataTemplate> CreateTemplates()
 }
 
 
-static function X2DataTemplate CreateTemplate_PA_AndromedonGun()
+static function X2DataTemplate CreateTemplate_PA_AndromedonGunCV()
 {
 	local X2WeaponTemplate Template;
 
-	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_AndromedonGun');
+	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_AndromedonGunCV');
 
 	Template.WeaponPanelImage = "_MagneticRifle";                       // used by the UI. Probably determines iconview of the weapon.
 	
@@ -1088,7 +1088,7 @@ static function X2DataTemplate CreateTemplate_PA_AcidBlob()
 // ***                       Psi Amps                                     ***
 // **************************************************************************
 
-static function X2DataTemplate CreateSectoid_Amp()
+static function X2DataTemplate CreateSectoid_AmpCV()
 {
 	local X2WeaponTemplate Template;
 	local ArtifactCost	Resources;
@@ -1256,11 +1256,11 @@ static function X2DataTemplate CreateSectoid_Amp_BM()
 
 
 // Vanilla weapon has WeaponCat rifle, so anybody could use it
-static function X2DataTemplate CreateTemplate_PA_ViperGun()
+static function X2DataTemplate CreateTemplate_PA_ViperGunCV()
 {
 	local X2WeaponTemplate Template;
 
-	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_ViperGun');
+	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_ViperGunCV');
 
 	Template.WeaponPanelImage = "_MagneticRifle";                       // used by the UI. Probably determines iconview of the weapon.
 	
@@ -1899,11 +1899,11 @@ static function X2DataTemplate CreateTemplate_PA_MutonEliteBayonet()
 	return Template;
 }
 
-static function X2DataTemplate CreateTemplate_PA_MutonGun()
+static function X2DataTemplate CreateTemplate_PA_MutonGunCV()
 {
 	local X2WeaponTemplate Template;
 
-	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_MutonGun');
+	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_MutonGunCV');
 
 	Template.WeaponPanelImage = "_MagneticRifle";                       // used by the UI. Probably determines iconview of the weapon.
 	
@@ -2200,11 +2200,11 @@ static function X2DataTemplate CreateTemplate_PA_MutonGunBeam()
 	return Template;
 }
 
-static function X2DataTemplate CreateTemplate_PA_MutonCannon()
+static function X2DataTemplate CreateTemplate_PA_MutonCannonCV()
 {
 	local X2WeaponTemplate Template;
 
-	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_MutonCannon');
+	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_MutonCannonCV');
 
 	Template.WeaponPanelImage = "_BeamCannon";                       // used by the UI. Probably determines iconview of the weapon.
 	
@@ -2542,11 +2542,11 @@ static function X2DataTemplate CreateTemplate_PA_MutonCannonBeam()
 	return Template;
 }
 
-static function X2DataTemplate CreateTemplate_PA_MutonStalkerGun()
+static function X2DataTemplate CreateTemplate_PA_MutonStalkerGunCV()
 {
 	local X2WeaponTemplate Template;
 
-	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_MutonStalkerGun');
+	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_MutonStalkerGunCV');
 
 	Template.WeaponPanelImage = "_MagneticRifle";                       // used by the UI. Probably determines iconview of the weapon.
 	
@@ -2873,11 +2873,11 @@ static function X2DataTemplate CreateTemplate_PA_MutonStalkerGunBeam()
 	return Template;
 }
 
-static function X2DataTemplate CreateTemplate_PA_MutonBeleaguerGun()
+static function X2DataTemplate CreateTemplate_PA_MutonBeleaguerGunCV()
 {
 	local X2WeaponTemplate Template;
 
-	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_MutonBeleaguerGun');
+	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_MutonBeleaguerGunCV');
 
 	Template.WeaponPanelImage = "_MagneticRifle";                       // used by the UI. Probably determines iconview of the weapon.
 	
@@ -3189,11 +3189,11 @@ static function X2DataTemplate CreateTemplate_PA_MutonBeleaguerGunBeam()
 	return Template;
 }
 
-static function X2DataTemplate CreateTemplate_PA_MutonHarrierLauncher()
+static function X2DataTemplate CreateTemplate_PA_MutonHarrierLauncherCV()
 {
 	local X2WeaponTemplate Template;
 
-	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_MutonHarrierLauncher');
+	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_MutonHarrierLauncherCV');
 	
 	Template.WeaponPanelImage = "_ConventionalRifle";                       // used by the UI. Probably determines iconview of the weapon.
 	Template.ItemCat = 'weapon';
@@ -3521,11 +3521,11 @@ static function X2DataTemplate CreateTemplate_PA_MutonHarrierLauncherBeam()
 
 //SECTOIDS
 
-static function X2DataTemplate CreateTemplate_PA_SectoidGun()
+static function X2DataTemplate CreateTemplate_PA_SectoidGunCV()
 {
 	local X2WeaponTemplate Template;
 
-	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_SectoidGun');
+	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_SectoidGunCV');
 
 	Template.WeaponPanelImage = "_MagneticRifle";                       // used by the UI. Probably determines iconview of the weapon.
 	
@@ -3848,11 +3848,11 @@ static function X2DataTemplate CreateTemplate_PA_SectoidGunBeam()
 	return Template;
 }
 
-static function X2DataTemplate CreateTemplate_PA_SidewinderGun()
+static function X2DataTemplate CreateTemplate_PA_SidewinderGunCV()
 {
 	local X2WeaponTemplate Template;
 
-	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_SidewinderGun');
+	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_SidewinderGunCV');
 
 	Template.WeaponPanelImage = "_MagneticRifle";                       // used by the UI. Probably determines iconview of the weapon.
 	
@@ -4158,11 +4158,11 @@ static function X2DataTemplate CreateTemplate_PA_SidewinderGunBeam()
 	return Template;
 }
 
-static function X2DataTemplate CreateTemplate_PA_NajaGun()
+static function X2DataTemplate CreateTemplate_PA_NajaGunCV()
 {
 	local X2WeaponTemplate Template;
 
-	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_NajaGun');
+	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_NajaGunCV');
 
 	Template.WeaponPanelImage = "_MagneticRifle";                       // used by the UI. Probably determines iconview of the weapon.
 	
@@ -4473,11 +4473,11 @@ static function X2DataTemplate CreateTemplate_PA_NajaGunBeam()
 	return Template;
 }
 
-static function X2DataTemplate CreateTemplate_PA_ArchonGun()
+static function X2DataTemplate CreateTemplate_PA_ArchonGunCV()
 {
 	local X2WeaponTemplate Template;
 
-	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_ArchonGun');
+	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_ArchonGunCV');
 
 	Template.WeaponPanelImage = "_MagneticRifle";                       // used by the UI. Probably determines iconview of the weapon.
 	
