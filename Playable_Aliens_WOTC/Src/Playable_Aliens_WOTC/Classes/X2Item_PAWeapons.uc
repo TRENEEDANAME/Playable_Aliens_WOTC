@@ -229,11 +229,12 @@ var config WeaponDamageValue ANDROMEDONRIFLE_CONVENTIONAL_BASEDAMAGE;
 
 var config array<int> AndromedonRifle_Conventional_Range;
 
-var config int ANDROMEDONRIFLE_AIM;
-var config int ANDROMEDONRIFLE_CRITCHANCE;
-var config int ANDROMEDONRIFLE_ICLIPSIZE;
-var config int ANDROMEDONRIFLE_ISOUNDRANGE;
-var config int ANDROMEDONRIFLE_IENVIRONMENTDAMAGE;
+var config int ANDROMEDONRIFLE_CONVENTIONAL_AIM;
+
+var config int ANDROMEDONRIFLE_CONVENTIONAL_CRITCHANCE;
+var config int ANDROMEDONRIFLE_CONVENTIONAL_ICLIPSIZE;
+var config int ANDROMEDONRIFLE_CONVENTIONAL_ISOUNDRANGE;
+var config int ANDROMEDONRIFLE_CONVENTIONAL_IENVIRONMENTDAMAGE;
 
 //* -------------------------------------------------------
 //* Andromedon Rifle - Laser
@@ -414,10 +415,6 @@ var config WeaponDamageValue FROSTNECROMANCERBLASTER_BEAM_BASEDAMAGE;
 
 var config WeaponDamageValue PA_FrostBlob_Damage;
 
-var config int PA_FrostBlobRange;
-var config int PA_FrostBlobRadius;
-var config int PA_FrostBlobClipSize;
-var config int PA_FrostBlobSoundRange;
 
 //* -------------------------------------------------------
 //* Archon Bayonet
@@ -466,10 +463,11 @@ var config int PA_FrostBlobRadius;
 var config int PA_FrostBlobClipSize;
 var config int PA_FrostBlobSoundRange;
 
-var config int PA_Andomedon_AcidBlob_Range;
-var config int PA_Andomedon_AcidBlob_Radius;
-var config int PA_Andomedon_AcidBlob_ClipSize;
-var config int PA_Andomedon_AcidBlob_SoundRange;
+
+var config int PA_Andromedon_AcidBlob_Range;
+var config int PA_Andromedon_AcidBlob_Radius;
+var config int PA_Andromedon_AcidBlob_ClipSize;
+var config int PA_Andromedon_AcidBlob_SoundRange;
 
 var config int FrostSpitRange;
 var config int FrostSpitRadius;
@@ -632,9 +630,9 @@ static function array<X2DataTemplate> CreateTemplates()
 	ModWeapons.AddItem(CreateTemplate_PA_SectoidGunCoil());
 	ModWeapons.AddItem(CreateTemplate_PA_SectoidGunBeam());
 	
-	ModWeapons.AddItem(CreateSectoid_Amp_CV());
-	ModWeapons.AddItem(CreateSectoid_Amp_MG());
-	ModWeapons.AddItem(CreateSectoid_Amp_BM());
+	ModWeapons.AddItem(CreateTemplate_Sectoid_Amp_CV());
+	ModWeapons.AddItem(CreateTemplate_Sectoid_Amp_MG());
+	ModWeapons.AddItem(CreateTemplate_Sectoid_Amp_BM());
 
 	ModWeapons.AddItem(CreateTemplate_PA_ViperGunCV());
 	ModWeapons.AddItem(CreateTemplate_PA_ViperGunLaser());
@@ -744,12 +742,12 @@ static function X2DataTemplate CreateTemplate_PA_AndromedonGunCV()
 	Template.RemoveTemplateAvailablility(Template.BITFIELD_GAMEAREA_Multiplayer);
 	Template.Tier = 0;
 	Template.RangeAccuracy = default.AndromedonRifle_Conventional_Range;
-	Template.BaseDamage = default.ANDROMEDONGUN_CONVENTIONAL_BASEDAMAGE;
-	Template.Aim = default.ANDROMEDONGUN_CONVENTIONAL_AIM;
-	Template.CritChance = default.ANDROMEDONGUN_CONVENTIONAL_CRITCHANCE;
-	Template.iClipSize = default.ANDROMEDONGUN_CONVENTIONAL_ICLIPSIZE;
-	Template.iSoundRange = default.ANDROMEDONGUN_CONVENTIONAL_ISOUNDRANGE;
-	Template.iEnvironmentDamage = default.ANDROMEDONGUN_CONVENTIONAL_IENVIRONMENTDAMAGE;
+	Template.BaseDamage = default.ANDROMEDONRIFLE_CONVENTIONAL_BASEDAMAGE;
+	Template.Aim = default.ANDROMEDONRIFLE_CONVENTIONAL_AIM;
+	Template.CritChance = default.ANDROMEDONRIFLE_CONVENTIONAL_CRITCHANCE;
+	Template.iClipSize = default.ANDROMEDONRIFLE_CONVENTIONAL_ICLIPSIZE;
+	Template.iSoundRange = default.ANDROMEDONRIFLE_CONVENTIONAL_ISOUNDRANGE;
+	Template.iEnvironmentDamage = default.ANDROMEDONRIFLE_CONVENTIONAL_IENVIRONMENTDAMAGE;
 	Template.iIdealRange = default.ANDROMEDON_IDEALRANGE;
 	Template.NumUpgradeSlots = default.ALIEN_FIREARM_UPGRADESLOTS;
 
@@ -796,10 +794,10 @@ static function X2DataTemplate CreateTemplate_PA_AndromedonGunLaser()
 	Template.RangeAccuracy = default.AndromedonRifle_Laser_Range;
 	Template.BaseDamage = default.AndromedonRifle_Laser_BaseDamage;
 	Template.Aim = default.LASERWEAPONAIMBONUS;
-	Template.CritChance = default.ANDROMEDONGUN_LASER_CRITCHANCE;
-	Template.iClipSize = default.ANDROMEDONGUN_LASER_ICLIPSIZE;
-	Template.iSoundRange = default.ANDROMEDONGUN_LASER_ISOUNDRANGE;
-	Template.iEnvironmentDamage = default.ANDROMEDONGUN_LASER_IENVIRONMENTDAMAGE;
+	Template.CritChance = default.ANDROMEDONRIFLE_LASER_CRITCHANCE;
+	Template.iClipSize = default.ANDROMEDONRIFLE_LASER_ICLIPSIZE;
+	Template.iSoundRange = default.ANDROMEDONRIFLE_LASER_ISOUNDRANGE;
+	Template.iEnvironmentDamage = default.ANDROMEDONRIFLE_LASER_IENVIRONMENTDAMAGE;
 	Template.iIdealRange = default.ANDROMEDON_IDEALRANGE;
 	
 	Template.NumUpgradeSlots = default.ALIEN_FIREARM_UPGRADESLOTS;
@@ -1088,7 +1086,7 @@ static function X2DataTemplate CreateTemplate_PA_AcidBlob()
 // ***                       Psi Amps                                     ***
 // **************************************************************************
 
-static function X2DataTemplate CreateSectoid_AmpCV()
+static function X2DataTemplate CreateTemplateSectoid_Amp_CV()
 {
 	local X2WeaponTemplate Template;
 	local ArtifactCost	Resources;
@@ -1126,7 +1124,7 @@ static function X2DataTemplate CreateSectoid_AmpCV()
 	return Template;
 }
 
-static function X2DataTemplate CreateSectoid_Amp_MG()
+static function X2DataTemplate CreateTemplateSectoid_Amp_MG()
 {
 	local X2WeaponTemplate Template;
 	local StrategyRequirement AltReq, AltReq2;
@@ -1190,7 +1188,7 @@ static function X2DataTemplate CreateSectoid_Amp_MG()
 	return Template;
 }
 
-static function X2DataTemplate CreateSectoid_Amp_BM()
+static function X2DataTemplate CreateTemplateSectoid_Amp_BM()
 {
 	local X2WeaponTemplate Template;
 	local StrategyRequirement AltReq, AltReq2;
