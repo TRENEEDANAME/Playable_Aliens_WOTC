@@ -1086,7 +1086,7 @@ static function X2DataTemplate CreateTemplate_PA_AcidBlob()
 // ***                       Psi Amps                                     ***
 // **************************************************************************
 
-static function X2DataTemplate CreateTemplateSectoid_Amp_CV()
+static function X2DataTemplate CreateTemplate_Sectoid_Amp_CV()
 {
 	local X2WeaponTemplate Template;
 	local ArtifactCost	Resources;
@@ -1124,7 +1124,7 @@ static function X2DataTemplate CreateTemplateSectoid_Amp_CV()
 	return Template;
 }
 
-static function X2DataTemplate CreateTemplateSectoid_Amp_MG()
+static function X2DataTemplate CreateTemplate_Sectoid_Amp_MG()
 {
 	local X2WeaponTemplate Template;
 	local StrategyRequirement AltReq, AltReq2;
@@ -1188,7 +1188,7 @@ static function X2DataTemplate CreateTemplateSectoid_Amp_MG()
 	return Template;
 }
 
-static function X2DataTemplate CreateTemplateSectoid_Amp_BM()
+static function X2DataTemplate CreateTemplate_Sectoid_Amp_BM()
 {
 	local X2WeaponTemplate Template;
 	local StrategyRequirement AltReq, AltReq2;
@@ -1813,11 +1813,11 @@ static function X2DataTemplate CreateTemplate_PA_AdderTail_BM()
 
 
 // Vanilla weapon has broken image
-static function X2DataTemplate CreateTemplate_PA_MutonBayonet()
+static function X2DataTemplate CreateTemplate_PA_MutonBayonetCV()
 {
 	local X2WeaponTemplate Template;
 
-	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_MutonBayonet');
+	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_MutonBayonetCV');
 
 	Template.ItemCat = 'weapon';
 	Template.WeaponCat = 'PA_MutonBayonetCat';
@@ -4890,11 +4890,11 @@ static function X2DataTemplate CreateTemplate_PA_ArchonEliteBayonet()
 	return Template;
 }
 
-static function X2DataTemplate CreateTemplate_PA_FrostAdderGun()
+static function X2DataTemplate CreateTemplate_PA_FrostAdderGunCV()
 {
 	local X2WeaponTemplate Template;
 
-	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_FrostAdderGun');
+	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_FrostAdderGunCV');
 
 	Template.WeaponPanelImage = "_MagneticRifle";                       // used by the UI. Probably determines iconview of the weapon.
 	
@@ -5210,11 +5210,11 @@ static function X2DataTemplate CreateTemplate_PA_FrostAdderGunBeam()
 	return Template;
 }
 
-static function X2DataTemplate CreateTemplate_PA_FrostBomberGun()
+static function X2DataTemplate CreateTemplate_PA_FrostBomberGunCV()
 {
 	local X2WeaponTemplate Template;
 
-	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_FrostBomberGun');
+	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_FrostBomberGunCV');
 
 	Template.WeaponPanelImage = "_MagneticRifle";                       // used by the UI. Probably determines iconview of the weapon.
 	
@@ -5650,11 +5650,11 @@ static function X2DataTemplate CreateTemplate_PA_FrostBlob()
 	return Template;
 }
 
-static function X2DataTemplate CreateTemplate_PA_FrostNecromancerGun()
+static function X2DataTemplate CreateTemplate_PA_FrostNecromancerGunCV()
 {
 	local X2WeaponTemplate Template;
 
-	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_FrostNecromancerGun');
+	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_FrostNecromancerGunCV');
 
 	Template.WeaponPanelImage = "_MagneticRifle";                       // used by the UI. Probably determines iconview of the weapon.
 	
