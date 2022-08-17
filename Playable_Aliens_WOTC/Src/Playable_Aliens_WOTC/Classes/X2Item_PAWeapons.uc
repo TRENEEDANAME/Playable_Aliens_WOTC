@@ -455,7 +455,6 @@ var config array<int> LMG_ALL_RANGE;
 //* Poison / Frost Blob
 //* -------------------------------------------------------
 
-var config WeaponDamageValue PA_FrostBlob_Damage;
 var config WeaponDamageValue PA_FrostSpitGlob_Damage;
 var config WeaponDamageValue PA_Andomedon_AcidBlob_Damage;
 
