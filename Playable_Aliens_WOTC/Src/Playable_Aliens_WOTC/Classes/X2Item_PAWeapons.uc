@@ -227,7 +227,7 @@ var config int MUTONHARRIERLAUNCHER_BEAM_IENVIRONMENTDAMAGE;
 
 var config WeaponDamageValue ANDROMEDONRIFLE_CONVENTIONAL_BASEDAMAGE;
 
-var config array<int> ANDROMEDONRIFLE_RANGE;
+var config array<int> AndromedonRifle_Conventional_Range;
 
 var config int ANDROMEDONRIFLE_AIM;
 var config int ANDROMEDONRIFLE_CRITCHANCE;
@@ -239,7 +239,7 @@ var config int ANDROMEDONRIFLE_IENVIRONMENTDAMAGE;
 //* Andromedon Rifle - Laser
 //* -------------------------------------------------------
 
-var config array<int> ANDROMEDONRIFLE_LASER_RANGE;
+var config array<int> AndromedonRifle_Laser_Range;
 
 var config int ANDROMEDONRIFLE_LASER_AIM;
 var config int ANDROMEDONRIFLE_LASER_CRITCHANCE;
@@ -253,7 +253,7 @@ var config int ANDROMEDONRIFLE_LASER_IENVIRONMENTDAMAGE;
 
 var config WeaponDamageValue ANDROMEDONRIFLE_MAGNETIC_BASEDAMAGE;
 
-var config array<int> ANDROMEDONRIFLE_MAGNETIC_RANGE;
+var config array<int> AndromedonRifle_Magnetic_Range;
 
 var config int ANDROMEDONRIFLE_MAGNETIC_AIM;
 var config int ANDROMEDONRIFLE_MAGNETIC_CRITCHANCE;
@@ -265,7 +265,7 @@ var config int ANDROMEDONRIFLE_MAGNETIC_IENVIRONMENTDAMAGE;
 //* Andromedon Rifle - Coil
 //* -------------------------------------------------------
 
-var config array<int> ANDROMEDONRIFLE_COIL_RANGE;
+var config array<int> AndromedonRifle_Coil_Range;
 
 var config int ANDROMEDONRIFLE_COIL_AIM;
 var config int ANDROMEDONRIFLE_COIL_CRITCHANCE;
@@ -279,7 +279,7 @@ var config int ANDROMEDONRIFLE_COIL_IENVIRONMENTDAMAGE;
 
 var config WeaponDamageValue ANDROMEDONRIFLE_BEAM_BASEDAMAGE;
 
-var config array<int> ANDROMEDONRIFLE_BEAM_RANGE;
+var config array<int> AndromedonRifle_Beam_Range;
 
 var config int ANDROMEDONRIFLE_BEAM_AIM;
 var config int ANDROMEDONRIFLE_BEAM_CRITCHANCE;
@@ -412,7 +412,7 @@ var config WeaponDamageValue FROSTNECROMANCERBLASTER_BEAM_BASEDAMAGE;
 //* Frost Blob
 //* -------------------------------------------------------
 
-var config WeaponDamageValue PA_FROSTBLOB_BASEDAMAGE;
+var config WeaponDamageValue PA_FrostBlob_Damage;
 
 var config int PA_FrostBlobRange;
 var config int PA_FrostBlobRadius;
@@ -455,6 +455,7 @@ var config array<int> LMG_ALL_RANGE;
 //* Poison / Frost Blob
 //* -------------------------------------------------------
 
+var config WeaponDamageValue PA_FrostBlob_Damage;
 var config WeaponDamageValue PA_FrostSpitGlob_Damage;
 var config WeaponDamageValue PA_Andomedon_AcidBlob_Damage;
 
@@ -743,7 +744,7 @@ static function X2DataTemplate CreateTemplate_PA_AndromedonGun()
 	Template.EquipSound = "Magnetic_Weapon_Equip";
 	Template.RemoveTemplateAvailablility(Template.BITFIELD_GAMEAREA_Multiplayer);
 	Template.Tier = 0;
-	Template.RangeAccuracy = default.ANDROMEDONGUN_CONVENTIONAL_RANGE;
+	Template.RangeAccuracy = default.AndromedonRifle_Conventional_Range;
 	Template.BaseDamage = default.ANDROMEDONGUN_CONVENTIONAL_BASEDAMAGE;
 	Template.Aim = default.ANDROMEDONGUN_CONVENTIONAL_AIM;
 	Template.CritChance = default.ANDROMEDONGUN_CONVENTIONAL_CRITCHANCE;
@@ -793,7 +794,7 @@ static function X2DataTemplate CreateTemplate_PA_AndromedonGunLaser()
 	Template.EquipSound = "Magnetic_Weapon_Equip";
 	Template.RemoveTemplateAvailablility(Template.BITFIELD_GAMEAREA_Multiplayer);
 	Template.Tier = 150;
-	Template.RangeAccuracy = default.ANDROMEDONRIFLE_LASER_RANGE;
+	Template.RangeAccuracy = default.AndromedonRifle_Laser_Range;
 	Template.BaseDamage = default.AndromedonRifle_Laser_BaseDamage;
 	Template.Aim = default.LASERWEAPONAIMBONUS;
 	Template.CritChance = default.ANDROMEDONGUN_LASER_CRITCHANCE;
@@ -860,7 +861,7 @@ static function X2DataTemplate CreateTemplate_PA_AndromedonGunMagnetic()
 	Template.RemoveTemplateAvailablility(Template.BITFIELD_GAMEAREA_Multiplayer);
 	Template.Tier = 160;
 
-	Template.RangeAccuracy = default.ANDROMEDONRIFLE_MAGNETIC_RANGE;
+	Template.RangeAccuracy = default.AndromedonRifle_Magnetic_Range;
 	Template.BaseDamage = default.ANDROMEDONRIFLE_MAGNETIC_BASEDAMAGE;
 	Template.Aim = default.ANDROMEDONRIFLE_MAGNETIC_AIM;
 	Template.CritChance = default.ANDROMEDONRIFLE_MAGNETIC_CRITCHANCE;
@@ -927,7 +928,7 @@ static function X2DataTemplate CreateTemplate_PA_AndromedonGunCoil()
 	Template.EquipSound = "Magnetic_Weapon_Equip";
 	Template.RemoveTemplateAvailablility(Template.BITFIELD_GAMEAREA_Multiplayer);
 	Template.Tier = 170;
-	Template.RangeAccuracy = default.ANDROMEDONRIFLE_COIL_RANGE;
+	Template.RangeAccuracy = default.AndromedonRifle_Coil_Range;
 	Template.BaseDamage = default.AndromedonRifle_Coil_BaseDamage;
 	Template.Aim = default.ANDROMEDONRIFLE_COIL_AIM;
 	Template.CritChance = default.ANDROMEDONRIFLE_COIL_CRITCHANCE;
@@ -996,7 +997,7 @@ static function X2DataTemplate CreateTemplate_PA_AndromedonGunBeam()
 	Template.RemoveTemplateAvailablility(Template.BITFIELD_GAMEAREA_Multiplayer);
 	Template.Tier = 180;
 
-	Template.RangeAccuracy = default.ANDROMEDONRIFLE_BEAM_RANGE;
+	Template.RangeAccuracy = default.AndromedonRifle_Beam_Range;
 	Template.BaseDamage = default.ANDROMEDONRIFLE_BEAM_BASEDAMAGE;
 	Template.Aim = default.ANDROMEDONRIFLE_BEAM_AIM;
 	Template.CritChance = default.ANDROMEDONRIFLE_BEAM_CRITCHANCE;
@@ -5642,7 +5643,7 @@ static function X2DataTemplate CreateTemplate_PA_FrostBlob()
 	Template.bSoundOriginatesFromOwnerLocation = false;
 
 	Template.BaseDamage.DamageType = 'Frost';
-	Template.BaseDamage = default.PA_FROSTBLOB_BASEDAMAGE;
+	Template.BaseDamage = default.PA_FrostBlob_Damage;
 	
 	Template.InventorySlot = eInvSlot_TertiaryWeapon;
 	Template.StowedLocation = eSlot_None;
