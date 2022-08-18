@@ -240,6 +240,9 @@ var config int ANDROMEDONRIFLE_CONVENTIONAL_IENVIRONMENTDAMAGE;
 //* Andromedon Rifle - Laser
 //* -------------------------------------------------------
 
+var config WeaponDamageValue ANDROMEDONRIFLE_LASER_BASEDAMAGE;
+
+
 var config array<int> AndromedonRifle_Laser_Range;
 
 var config int ANDROMEDONRIFLE_LASER_AIM;
@@ -265,6 +268,8 @@ var config int ANDROMEDONRIFLE_MAGNETIC_IENVIRONMENTDAMAGE;
 //* -------------------------------------------------------
 //* Andromedon Rifle - Coil
 //* -------------------------------------------------------
+
+var config WeaponDamageValue ANDROMEDONRIFLE_COIL_BASEDAMAGE;
 
 var config array<int> AndromedonRifle_Coil_Range;
 
@@ -422,13 +427,6 @@ var config WeaponDamageValue PA_FrostBlob_Damage;
 
 var config WeaponDamageValue ARCHON_BAYONET_BASEDAMAGE;
 var config WeaponDamageValue ARCHON_ELITEBAYONET_BASEDAMAGE;
-
-//* -------------------------------------------------------
-//* Andromedon Rifle
-//* -------------------------------------------------------
-
-var config WeaponDamageValue AndromedonRifle_Laser_BaseDamage;
-var config WeaponDamageValue AndromedonRifle_Coil_BaseDamage;
 
 //* -------------------------------------------------------
 //* Sectoid Rifle
@@ -792,7 +790,7 @@ static function X2DataTemplate CreateTemplate_PA_AndromedonGunLaser()
 	Template.RemoveTemplateAvailablility(Template.BITFIELD_GAMEAREA_Multiplayer);
 	Template.Tier = 150;
 	Template.RangeAccuracy = default.AndromedonRifle_Laser_Range;
-	Template.BaseDamage = default.AndromedonRifle_Laser_BaseDamage;
+	Template.BaseDamage = default.ANDROMEDONRIFLE_LASER_BASEDAMAGE;
 	Template.Aim = default.LASERWEAPONAIMBONUS;
 	Template.CritChance = default.ANDROMEDONRIFLE_LASER_CRITCHANCE;
 	Template.iClipSize = default.ANDROMEDONRIFLE_LASER_ICLIPSIZE;
@@ -926,7 +924,7 @@ static function X2DataTemplate CreateTemplate_PA_AndromedonGunCoil()
 	Template.RemoveTemplateAvailablility(Template.BITFIELD_GAMEAREA_Multiplayer);
 	Template.Tier = 170;
 	Template.RangeAccuracy = default.AndromedonRifle_Coil_Range;
-	Template.BaseDamage = default.AndromedonRifle_Coil_BaseDamage;
+	Template.BaseDamage = default.ANDROMEDONRIFLE_COIL_BASEDAMAGE;
 	Template.Aim = default.ANDROMEDONRIFLE_COIL_AIM;
 	Template.CritChance = default.ANDROMEDONRIFLE_COIL_CRITCHANCE;
 	Template.iClipSize = default.ANDROMEDONRIFLE_COIL_ICLIPSIZE;
