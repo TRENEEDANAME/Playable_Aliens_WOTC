@@ -453,7 +453,7 @@ var config array<int> LMG_ALL_RANGE;
 //* -------------------------------------------------------
 
 var config WeaponDamageValue PA_FrostSpitGlob_Damage;
-var config WeaponDamageValue PA_Andomedon_AcidBlob_Damage;
+var config WeaponDamageValue PA_Andromedon_AcidBlob_Damage;
 
 var config int PoisonSpitRadius;
 var config int PoisonSpitRange;
@@ -1070,7 +1070,7 @@ static function X2DataTemplate CreateTemplate_PA_AcidBlob()
 	Template.bSoundOriginatesFromOwnerLocation = false;
 
 	Template.BaseDamage.DamageType = 'Acid';
-	Template.BaseDamage = default.PA_Andomedon_AcidBlob_Damage;
+	Template.BaseDamage = default.PA_Andromedon_AcidBlob_Damage;
 	
 	Template.InventorySlot = eInvSlot_SecondaryWeapon;
 	Template.StowedLocation = eSlot_None;
