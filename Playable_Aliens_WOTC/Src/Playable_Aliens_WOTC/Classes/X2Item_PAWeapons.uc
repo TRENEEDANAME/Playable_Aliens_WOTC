@@ -1209,7 +1209,7 @@ static function X2DataTemplate CreateTemplate_Sectoid_Amp_BM()
 	Template.Tier = 104;
 	// This all the resources; sounds, animations, models, physics, the works.
 	
-	Template.GameArchetype = "WP_PsiAmp_BM.WP_PsiAmp_BM";
+	// Template.GameArchetype = "WP_PsiAmp_BM.WP_PsiAmp_BM";
 
 	Template.Abilities.AddItem('PsiAmpBM_BonusStats');
 
