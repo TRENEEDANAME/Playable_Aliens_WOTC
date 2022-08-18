@@ -1,6 +1,6 @@
 ## Description
 
-This is the github repository of the **mod project** folder for my [Playable Rulers mod](https://steamcommunity.com/sharedfiles/filedetails/?id=2823002635). 
+This is the github repository of the **mod project** folder for my [Playable Aliens mod](https://steamcommunity.com/sharedfiles/filedetails/?id=2850604395). 
 This will be the most up to date project folder from the mod, even before it's on steam.
 
 ## How to build the mod
@@ -17,7 +17,7 @@ This will be the most up to date project folder from the mod, even before it's o
 #### Required mod
 
 Required mod = [[WOTC] Shadow Ops Perk Pack](https://steamcommunity.com/workshop/filedetails/?id=1519841231), [[WOTC] Extended Perk Pack](https://steamcommunity.com/workshop/filedetails/?id=1546482849), [Mitzruti's Perk Pack - DLC Extension
-](https://steamcommunity.com/workshop/filedetails/?id=2066389408), [Custom Soldier Evac Fix](https://steamcommunity.com/sharedfiles/filedetails/?id=1124713229), [Mitzruti's Perk Pack](https://steamcommunity.com/workshop/filedetails/?id=1561030099), [Playable XCOM 2 Aliens - Viper Class Overhaul](https://steamcommunity.com/workshop/filedetails/?id=1869612587) and [Alien Hunters Community Highlander [WOTC]](https://steamcommunity.com/sharedfiles/filedetails/?id=2534737016)
+](https://steamcommunity.com/workshop/filedetails/?id=2066389408), [Mitzruti's Perk Pack](https://steamcommunity.com/workshop/filedetails/?id=1561030099), [Playable XCOM 2 Aliens - Viper Class Overhaul](https://steamcommunity.com/workshop/filedetails/?id=1869612587) and [Alien Hunters Community Highlander [WOTC]](https://steamcommunity.com/sharedfiles/filedetails/?id=2534737016)
 
 (The perk pack is not **required**, but a lot of ability won't work or will need new ability tree.)
 
