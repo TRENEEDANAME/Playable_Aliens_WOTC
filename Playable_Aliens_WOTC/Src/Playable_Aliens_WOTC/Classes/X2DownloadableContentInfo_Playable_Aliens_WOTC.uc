@@ -16,7 +16,6 @@ var config(PlayableAdvent) int EntwineDamage;
 var config array<name> IncludedAlienClasses;
 var config array<name> IncludedAlienTemplates;
 var config int NumberOfAlienUtilitySlots;
-//var config name DominationAbility;
 
 /// <summary>
 /// This method is run if the player loads a saved game that was created prior to this DLC / Mod being installed, and allows the 
