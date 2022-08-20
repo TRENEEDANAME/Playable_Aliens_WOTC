@@ -418,7 +418,7 @@ var config WeaponDamageValue FROSTNECROMANCERBLASTER_BEAM_BASEDAMAGE;
 //* Frost Blob
 //* -------------------------------------------------------
 
-var config WeaponDamageValue PA_FrostBlob_Damage;
+var config WeaponDamageValue PA_FROSTBLOB_BASEDAMAGE;
 
 
 //* -------------------------------------------------------
@@ -613,7 +613,7 @@ var config(AlienGearCosts) int BEAM_ARCHON_BAYONET_ENGINEERING_SCORE;
 static function array<X2DataTemplate> CreateTemplates()
 {
 	local array<X2DataTemplate> ModWeapons;
-	ModWeapons.AddItem(CreateTemplate_PA_ArchonGunCV());
+	ModWeapons.AddItem(CreateTemplate_PA_ArchonGun());
 	ModWeapons.AddItem(CreateTemplate_PA_ArchonGunLaser());
 	ModWeapons.AddItem(CreateTemplate_PA_ArchonGunMagnetic());
 	ModWeapons.AddItem(CreateTemplate_PA_ArchonGunCoil());
@@ -622,17 +622,17 @@ static function array<X2DataTemplate> CreateTemplates()
 	ModWeapons.AddItem(CreateTemplate_PA_ArchonEliteBayonet());
 	ModWeapons.AddItem(CreateTemplate_PA_ArchonPinions());
 
-	ModWeapons.AddItem(CreateTemplate_PA_SectoidGunCV());
+	ModWeapons.AddItem(CreateTemplate_PA_SectoidGun());
 	ModWeapons.AddItem(CreateTemplate_PA_SectoidGunLaser());
 	ModWeapons.AddItem(CreateTemplate_PA_SectoidGunMagnetic());
 	ModWeapons.AddItem(CreateTemplate_PA_SectoidGunCoil());
 	ModWeapons.AddItem(CreateTemplate_PA_SectoidGunBeam());
 	
-	ModWeapons.AddItem(CreateTemplate_Sectoid_Amp_CV());
-	ModWeapons.AddItem(CreateTemplate_Sectoid_Amp_MG());
-	ModWeapons.AddItem(CreateTemplate_Sectoid_Amp_BM());
+	ModWeapons.AddItem(CreateSectoid_Amp());
+	ModWeapons.AddItem(CreateSectoid_Amp_MG());
+	ModWeapons.AddItem(CreateSectoid_Amp_BM());
 
-	ModWeapons.AddItem(CreateTemplate_PA_ViperGunCV());
+	ModWeapons.AddItem(CreateTemplate_PA_ViperGun());
 	ModWeapons.AddItem(CreateTemplate_PA_ViperGunLaser());
 	ModWeapons.AddItem(CreateTemplate_PA_ViperGunMagnetic());
 	ModWeapons.AddItem(CreateTemplate_PA_ViperGunCoil());
@@ -642,52 +642,52 @@ static function array<X2DataTemplate> CreateTemplates()
 	ModWeapons.AddItem(CreateTemplate_PA_PoisonSpitGlob());
 	ModWeapons.AddItem(CreateTemplate_PA_FrostSpitGlob());
 
-	ModWeapons.AddItem(CreateTemplate_PA_MutonGunCV());
+	ModWeapons.AddItem(CreateTemplate_PA_MutonGun());
 	ModWeapons.AddItem(CreateTemplate_PA_MutonGunLaser());
 	ModWeapons.AddItem(CreateTemplate_PA_MutonGunMagnetic());
 	ModWeapons.AddItem(CreateTemplate_PA_MutonGunCoil());
 	ModWeapons.AddItem(CreateTemplate_PA_MutonGunBeam());
 
-	ModWeapons.AddItem(CreateTemplate_PA_MutonBayonetCV());
+	ModWeapons.AddItem(CreateTemplate_PA_MutonBayonet());
 	ModWeapons.AddItem(CreateTemplate_PA_MutonEliteBayonet());
 
-	ModWeapons.AddItem(CreateTemplate_PA_MutonCannonCV());
+	ModWeapons.AddItem(CreateTemplate_PA_MutonCannon());
 	ModWeapons.AddItem(CreateTemplate_PA_MutonCannonLaser());
 	ModWeapons.AddItem(CreateTemplate_PA_MutonCannonMagnetic());
 	ModWeapons.AddItem(CreateTemplate_PA_MutonCannonCoil());
 	ModWeapons.AddItem(CreateTemplate_PA_MutonCannonBeam());
 
-	ModWeapons.AddItem(CreateTemplate_PA_MutonHarrierLauncherCV());
+	ModWeapons.AddItem(CreateTemplate_PA_MutonHarrierLauncher());
 	ModWeapons.AddItem(CreateTemplate_PA_MutonHarrierLauncherLaser());
 	ModWeapons.AddItem(CreateTemplate_PA_MutonHarrierLauncherMagnetic());
 	ModWeapons.AddItem(CreateTemplate_PA_MutonHarrierLauncherCoil());
 	ModWeapons.AddItem(CreateTemplate_PA_MutonHarrierLauncherBeam());
 
-	ModWeapons.AddItem(CreateTemplate_PA_MutonStalkerGunCV());
+	ModWeapons.AddItem(CreateTemplate_PA_MutonStalkerGun());
 	ModWeapons.AddItem(CreateTemplate_PA_MutonStalkerGunLaser());
 	ModWeapons.AddItem(CreateTemplate_PA_MutonStalkerGunMagnetic());
 	ModWeapons.AddItem(CreateTemplate_PA_MutonStalkerGunCoil());
 	ModWeapons.AddItem(CreateTemplate_PA_MutonStalkerGunBeam());
 
-	ModWeapons.AddItem(CreateTemplate_PA_MutonBeleaguerGunCV());
+	ModWeapons.AddItem(CreateTemplate_PA_MutonBeleaguerGun());
 	ModWeapons.AddItem(CreateTemplate_PA_MutonBeleaguerGunLaser());
 	ModWeapons.AddItem(CreateTemplate_PA_MutonBeleaguerGunMagnetic());
 	ModWeapons.AddItem(CreateTemplate_PA_MutonBeleaguerGunCoil());
 	ModWeapons.AddItem(CreateTemplate_PA_MutonBeleaguerGunBeam());
 
-	ModWeapons.AddItem(CreateTemplate_PA_SidewinderGunCV());
+	ModWeapons.AddItem(CreateTemplate_PA_SidewinderGun());
 	ModWeapons.AddItem(CreateTemplate_PA_SidewinderGunLaser());
 	ModWeapons.AddItem(CreateTemplate_PA_SidewinderGunMagnetic());
 	ModWeapons.AddItem(CreateTemplate_PA_SidewinderGunCoil());
 	ModWeapons.AddItem(CreateTemplate_PA_SidewinderGunBeam());
 
-	ModWeapons.AddItem(CreateTemplate_PA_NajaGunCV());
+	ModWeapons.AddItem(CreateTemplate_PA_NajaGun());
 	ModWeapons.AddItem(CreateTemplate_PA_NajaGunLaser());
 	ModWeapons.AddItem(CreateTemplate_PA_NajaGunMagnetic());
 	ModWeapons.AddItem(CreateTemplate_PA_NajaGunCoil());
 	ModWeapons.AddItem(CreateTemplate_PA_NajaGunBeam());
 
-	ModWeapons.AddItem(CreateTemplate_PA_AndromedonGunCV());
+	ModWeapons.AddItem(CreateTemplate_PA_AndromedonGun());
 	ModWeapons.AddItem(CreateTemplate_PA_AndromedonGunLaser());
 	ModWeapons.AddItem(CreateTemplate_PA_AndromedonGunMagnetic());
 	ModWeapons.AddItem(CreateTemplate_PA_AndromedonGunCoil());
@@ -695,7 +695,7 @@ static function array<X2DataTemplate> CreateTemplates()
 	ModWeapons.AddItem(CreateTemplate_PA_AcidBlob());
 	ModWeapons.AddItem(CreateTemplate_PA_FrostBlob());
 
-	ModWeapons.AddItem(CreateTemplate_PA_FrostAdderGunCV());
+	ModWeapons.AddItem(CreateTemplate_PA_FrostAdderGun());
 	ModWeapons.AddItem(CreateTemplate_PA_FrostAdderGunLaser());
 	ModWeapons.AddItem(CreateTemplate_PA_FrostAdderGunMagnetic());
 	ModWeapons.AddItem(CreateTemplate_PA_FrostAdderGunCoil());
@@ -705,7 +705,7 @@ static function array<X2DataTemplate> CreateTemplates()
 	ModWeapons.AddItem(CreateTemplate_PA_AdderTail_MG());
 	ModWeapons.AddItem(CreateTemplate_PA_AdderTail_BM());
 
-	ModWeapons.AddItem(CreateTemplate_PA_FrostBomberGunCV());
+	ModWeapons.AddItem(CreateTemplate_PA_FrostBomberGun());
 	ModWeapons.AddItem(CreateTemplate_PA_FrostBomberGunLaser());
 	ModWeapons.AddItem(CreateTemplate_PA_FrostBomberGunMagnetic());
 	ModWeapons.AddItem(CreateTemplate_PA_FrostBomberGunCoil());
@@ -714,7 +714,7 @@ static function array<X2DataTemplate> CreateTemplates()
 	ModWeapons.AddItem(CreateTemplate_PA_FrostBomberBayonet());
 	ModWeapons.AddItem(CreateTemplate_PA_FrostBomberEliteBayonet());
 
-	ModWeapons.AddItem(CreateTemplate_PA_FrostNecromancerGunCV());
+	ModWeapons.AddItem(CreateTemplate_PA_FrostNecromancerGun());
 	ModWeapons.AddItem(CreateTemplate_PA_FrostNecromancerGunLaser());
 	ModWeapons.AddItem(CreateTemplate_PA_FrostNecromancerGunMagnetic());
 	ModWeapons.AddItem(CreateTemplate_PA_FrostNecromancerGunCoil());
@@ -724,11 +724,11 @@ static function array<X2DataTemplate> CreateTemplates()
 }
 
 
-static function X2DataTemplate CreateTemplate_PA_AndromedonGunCV()
+static function X2DataTemplate CreateTemplate_PA_AndromedonGun()
 {
 	local X2WeaponTemplate Template;
 
-	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_AndromedonGunCV');
+	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_AndromedonGun');
 
 	Template.WeaponPanelImage = "_MagneticRifle";                       // used by the UI. Probably determines iconview of the weapon.
 	
@@ -739,14 +739,14 @@ static function X2DataTemplate CreateTemplate_PA_AndromedonGunCV()
 	Template.EquipSound = "Magnetic_Weapon_Equip";
 	Template.RemoveTemplateAvailablility(Template.BITFIELD_GAMEAREA_Multiplayer);
 	Template.Tier = 0;
-	Template.RangeAccuracy = default.AndromedonRifle_Conventional_Range;
-	Template.BaseDamage = default.ANDROMEDONRIFLE_CONVENTIONAL_BASEDAMAGE;
-	Template.Aim = default.ANDROMEDONRIFLE_CONVENTIONAL_AIM;
-	Template.CritChance = default.ANDROMEDONRIFLE_CONVENTIONAL_CRITCHANCE;
-	Template.iClipSize = default.ANDROMEDONRIFLE_CONVENTIONAL_ICLIPSIZE;
-	Template.iSoundRange = default.ANDROMEDONRIFLE_CONVENTIONAL_ISOUNDRANGE;
-	Template.iEnvironmentDamage = default.ANDROMEDONRIFLE_CONVENTIONAL_IENVIRONMENTDAMAGE;
-	Template.iIdealRange = default.ANDROMEDON_IDEALRANGE;
+	Template.RangeAccuracy = default.LMG_ALL_RANGE;
+	Template.BaseDamage = class'X2Item_DefaultWeapons'.default.LMG_CONVENTIONAL_BASEDAMAGE;
+	Template.Aim = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_CONVENTIONAL_AIM;
+	Template.CritChance = class'X2Item_DefaultWeapons'.default.LMG_MAGNETIC_CRITCHANCE;
+	Template.iClipSize = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_CONVENTIONAL_ICLIPSIZE;
+	Template.iSoundRange = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_MAGNETIC_ISOUNDRANGE;
+	Template.iEnvironmentDamage = class'X2Item_DefaultWeapons'.default.LMG_MAGNETIC_IENVIRONMENTDAMAGE;
+	Template.iIdealRange = class'X2Item_DefaultWeapons'.default.ANDROMEDON_IDEALRANGE;
 	Template.NumUpgradeSlots = default.ALIEN_FIREARM_UPGRADESLOTS;
 
 	Template.DamageTypeTemplateName = 'Projectile_BeamXCom';
@@ -789,14 +789,14 @@ static function X2DataTemplate CreateTemplate_PA_AndromedonGunLaser()
 	Template.EquipSound = "Magnetic_Weapon_Equip";
 	Template.RemoveTemplateAvailablility(Template.BITFIELD_GAMEAREA_Multiplayer);
 	Template.Tier = 150;
-	Template.RangeAccuracy = default.AndromedonRifle_Laser_Range;
-	Template.BaseDamage = default.ANDROMEDONRIFLE_LASER_BASEDAMAGE;
+	Template.RangeAccuracy = default.LMG_ALL_RANGE;
+	Template.BaseDamage = default.AndromedonRifle_Laser_BaseDamage;
 	Template.Aim = default.LASERWEAPONAIMBONUS;
-	Template.CritChance = default.ANDROMEDONRIFLE_LASER_CRITCHANCE;
-	Template.iClipSize = default.ANDROMEDONRIFLE_LASER_ICLIPSIZE;
-	Template.iSoundRange = default.ANDROMEDONRIFLE_LASER_ISOUNDRANGE;
-	Template.iEnvironmentDamage = default.ANDROMEDONRIFLE_LASER_IENVIRONMENTDAMAGE;
-	Template.iIdealRange = default.ANDROMEDON_IDEALRANGE;
+	Template.CritChance = class'X2Item_DefaultWeapons'.default.LMG_MAGNETIC_CRITCHANCE;
+	Template.iClipSize = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_MAGNETIC_ICLIPSIZE;
+	Template.iSoundRange = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_MAGNETIC_ISOUNDRANGE;
+	Template.iEnvironmentDamage = class'X2Item_DefaultWeapons'.default.LMG_MAGNETIC_IENVIRONMENTDAMAGE;
+	Template.iIdealRange = class'X2Item_DefaultWeapons'.default.ANDROMEDON_IDEALRANGE;
 	
 	Template.NumUpgradeSlots = default.ALIEN_FIREARM_UPGRADESLOTS;
 
@@ -856,14 +856,14 @@ static function X2DataTemplate CreateTemplate_PA_AndromedonGunMagnetic()
 	Template.RemoveTemplateAvailablility(Template.BITFIELD_GAMEAREA_Multiplayer);
 	Template.Tier = 160;
 
-	Template.RangeAccuracy = default.AndromedonRifle_Magnetic_Range;
-	Template.BaseDamage = default.ANDROMEDONRIFLE_MAGNETIC_BASEDAMAGE;
-	Template.Aim = default.ANDROMEDONRIFLE_MAGNETIC_AIM;
-	Template.CritChance = default.ANDROMEDONRIFLE_MAGNETIC_CRITCHANCE;
-	Template.iClipSize = default.ANDROMEDONRIFLE_MAGNETIC_ICLIPSIZE;
-	Template.iSoundRange = default.ANDROMEDONRIFLE_MAGNETIC_ISOUNDRANGE;
-	Template.iEnvironmentDamage = default.ANDROMEDONRIFLE_MAGNETIC_IENVIRONMENTDAMAGE;
-	Template.iIdealRange = default.ANDROMEDON_IDEALRANGE;
+	Template.RangeAccuracy = default.LMG_ALL_RANGE;
+	Template.BaseDamage = class'X2Item_DefaultWeapons'.default.LMG_MAGNETIC_BASEDAMAGE;
+	Template.Aim = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_MAGNETIC_AIM;
+	Template.CritChance = class'X2Item_DefaultWeapons'.default.LMG_MAGNETIC_CRITCHANCE;
+	Template.iClipSize = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_MAGNETIC_ICLIPSIZE;
+	Template.iSoundRange = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_MAGNETIC_ISOUNDRANGE;
+	Template.iEnvironmentDamage = class'X2Item_DefaultWeapons'.default.LMG_MAGNETIC_IENVIRONMENTDAMAGE;
+	Template.iIdealRange = class'X2Item_DefaultWeapons'.default.ANDROMEDON_IDEALRANGE;
 	
 	Template.NumUpgradeSlots = default.ALIEN_FIREARM_UPGRADESLOTS;
 
@@ -923,14 +923,14 @@ static function X2DataTemplate CreateTemplate_PA_AndromedonGunCoil()
 	Template.EquipSound = "Magnetic_Weapon_Equip";
 	Template.RemoveTemplateAvailablility(Template.BITFIELD_GAMEAREA_Multiplayer);
 	Template.Tier = 170;
-	Template.RangeAccuracy = default.AndromedonRifle_Coil_Range;
-	Template.BaseDamage = default.ANDROMEDONRIFLE_COIL_BASEDAMAGE;
-	Template.Aim = default.ANDROMEDONRIFLE_COIL_AIM;
-	Template.CritChance = default.ANDROMEDONRIFLE_COIL_CRITCHANCE;
-	Template.iClipSize = default.ANDROMEDONRIFLE_COIL_ICLIPSIZE;
-	Template.iSoundRange = default.ANDROMEDONRIFLE_COIL_ISOUNDRANGE;
-	Template.iEnvironmentDamage = default.ANDROMEDONRIFLE_COIL_IENVIRONMENTDAMAGE;
-	Template.iIdealRange = default.ANDROMEDON_IDEALRANGE;
+	Template.RangeAccuracy = default.LMG_ALL_RANGE;
+	Template.BaseDamage = default.AndromedonRifle_Coil_BaseDamage;
+	Template.Aim = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_MAGNETIC_AIM;
+	Template.CritChance = class'X2Item_DefaultWeapons'.default.LMG_MAGNETIC_CRITCHANCE;
+	Template.iClipSize = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_MAGNETIC_ICLIPSIZE;
+	Template.iSoundRange = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_MAGNETIC_ISOUNDRANGE;
+	Template.iEnvironmentDamage = class'X2Item_DefaultWeapons'.default.LMG_MAGNETIC_IENVIRONMENTDAMAGE;
+	Template.iIdealRange = class'X2Item_DefaultWeapons'.default.ANDROMEDON_IDEALRANGE;
 	
 	Template.NumUpgradeSlots = default.ALIEN_FIREARM_UPGRADESLOTS;
 
@@ -992,14 +992,14 @@ static function X2DataTemplate CreateTemplate_PA_AndromedonGunBeam()
 	Template.RemoveTemplateAvailablility(Template.BITFIELD_GAMEAREA_Multiplayer);
 	Template.Tier = 180;
 
-	Template.RangeAccuracy = default.AndromedonRifle_Beam_Range;
-	Template.BaseDamage = default.ANDROMEDONRIFLE_BEAM_BASEDAMAGE;
-	Template.Aim = default.ANDROMEDONRIFLE_BEAM_AIM;
-	Template.CritChance = default.ANDROMEDONRIFLE_BEAM_CRITCHANCE;
-	Template.iClipSize = default.ANDROMEDONRIFLE_BEAM_ICLIPSIZE;
-	Template.iSoundRange = default.ANDROMEDONRIFLE_BEAM_ISOUNDRANGE;
-	Template.iEnvironmentDamage = default.ANDROMEDONRIFLE_BEAM_IENVIRONMENTDAMAGE;
-	Template.iIdealRange = default.ANDROMEDON_IDEALRANGE;
+	Template.RangeAccuracy = default.LMG_ALL_RANGE;
+	Template.BaseDamage = class'X2Item_DefaultWeapons'.default.LMG_BEAM_BASEDAMAGE;
+	Template.Aim = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_BEAM_AIM;
+	Template.CritChance = class'X2Item_DefaultWeapons'.default.LMG_BEAM_CRITCHANCE;
+	Template.iClipSize = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_BEAM_ICLIPSIZE;
+	Template.iSoundRange = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_BEAM_ISOUNDRANGE;
+	Template.iEnvironmentDamage = class'X2Item_DefaultWeapons'.default.LMG_BEAM_IENVIRONMENTDAMAGE;
+	Template.iIdealRange = class'X2Item_DefaultWeapons'.default.ANDROMEDON_IDEALRANGE;
 	
 	Template.NumUpgradeSlots = default.ALIEN_FIREARM_UPGRADESLOTS;
 
@@ -1058,17 +1058,17 @@ static function X2DataTemplate CreateTemplate_PA_AcidBlob()
 	Template.GameArchetype = "WP_Andromedon_AcidAttack.WP_Andromedon_AcidAttack";
 	Template.CanBeBuilt = false;
 
-	Template.iRange = default.PA_Andromedon_AcidBlob_Range;
-	Template.iRadius = default.PA_Andromedon_AcidBlob_Radius;
-	Template.iClipSize = default.PA_Andromedon_AcidBlob_ClipSize;
+	Template.iRange = 14;
+	Template.iRadius = 4;
+	Template.iClipSize = 1;
 	Template.InfiniteAmmo = true;
 	Template.StartingItem = true;
 	Template.bInfiniteItem = true;
-	Template.iSoundRange = default.PA_Andromedon_AcidBlob_SoundRange;
+	Template.iSoundRange = 6;
 	Template.bSoundOriginatesFromOwnerLocation = false;
 
 	Template.BaseDamage.DamageType = 'Acid';
-	Template.BaseDamage = default.PA_Andromedon_AcidBlob_Damage;
+	Template.BaseDamage = class'X2Item_DefaultGrenades'.default.ANDROMEDON_ACIDBLOB_BASEDAMAGE;
 	
 	Template.InventorySlot = eInvSlot_SecondaryWeapon;
 	Template.StowedLocation = eSlot_None;
@@ -1084,7 +1084,7 @@ static function X2DataTemplate CreateTemplate_PA_AcidBlob()
 // ***                       Psi Amps                                     ***
 // **************************************************************************
 
-static function X2DataTemplate CreateTemplate_Sectoid_Amp_CV()
+static function X2DataTemplate CreateSectoid_Amp()
 {
 	local X2WeaponTemplate Template;
 	local ArtifactCost	Resources;
@@ -1122,7 +1122,7 @@ static function X2DataTemplate CreateTemplate_Sectoid_Amp_CV()
 	return Template;
 }
 
-static function X2DataTemplate CreateTemplate_Sectoid_Amp_MG()
+static function X2DataTemplate CreateSectoid_Amp_MG()
 {
 	local X2WeaponTemplate Template;
 	local StrategyRequirement AltReq, AltReq2;
@@ -1186,7 +1186,7 @@ static function X2DataTemplate CreateTemplate_Sectoid_Amp_MG()
 	return Template;
 }
 
-static function X2DataTemplate CreateTemplate_Sectoid_Amp_BM()
+static function X2DataTemplate CreateSectoid_Amp_BM()
 {
 	local X2WeaponTemplate Template;
 	local StrategyRequirement AltReq, AltReq2;
@@ -1207,7 +1207,7 @@ static function X2DataTemplate CreateTemplate_Sectoid_Amp_BM()
 	Template.Tier = 104;
 	// This all the resources; sounds, animations, models, physics, the works.
 	
-	// Template.GameArchetype = "WP_PsiAmp_BM.WP_PsiAmp_BM";
+	Template.GameArchetype = "WP_PsiAmp_BM.WP_PsiAmp_BM";
 
 	Template.Abilities.AddItem('PsiAmpBM_BonusStats');
 
@@ -1252,11 +1252,11 @@ static function X2DataTemplate CreateTemplate_Sectoid_Amp_BM()
 
 
 // Vanilla weapon has WeaponCat rifle, so anybody could use it
-static function X2DataTemplate CreateTemplate_PA_ViperGunCV()
+static function X2DataTemplate CreateTemplate_PA_ViperGun()
 {
 	local X2WeaponTemplate Template;
 
-	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_ViperGunCV');
+	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_ViperGun');
 
 	Template.WeaponPanelImage = "_MagneticRifle";                       // used by the UI. Probably determines iconview of the weapon.
 	
@@ -1610,10 +1610,10 @@ static function X2DataTemplate CreateTemplate_PA_FrostSpitGlob()
 	Template.bInfiniteItem = true;
 	Template.iRange = default.FrostSpitRange;
 	Template.iRadius = default.FrostSpitRadius;
-	Template.iClipSize = default.FrostSpitClipSize; // 7 
+	Template.iClipSize = 7;
 	Template.InfiniteAmmo = true;
 	Template.bHideClipSizeStat = true;
-	Template.iSoundRange = default.FrostSpitSoundRange; // 6
+	Template.iSoundRange = 6;
 
 	Template.BaseDamage.DamageType = 'Frost';
 	Template.BaseDamage = default.PA_FrostSpitGlob_Damage;
@@ -1811,11 +1811,11 @@ static function X2DataTemplate CreateTemplate_PA_AdderTail_BM()
 
 
 // Vanilla weapon has broken image
-static function X2DataTemplate CreateTemplate_PA_MutonBayonetCV()
+static function X2DataTemplate CreateTemplate_PA_MutonBayonet()
 {
 	local X2WeaponTemplate Template;
 
-	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_MutonBayonetCV');
+	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_MutonBayonet');
 
 	Template.ItemCat = 'weapon';
 	Template.WeaponCat = 'PA_MutonBayonetCat';
@@ -1895,11 +1895,11 @@ static function X2DataTemplate CreateTemplate_PA_MutonEliteBayonet()
 	return Template;
 }
 
-static function X2DataTemplate CreateTemplate_PA_MutonGunCV()
+static function X2DataTemplate CreateTemplate_PA_MutonGun()
 {
 	local X2WeaponTemplate Template;
 
-	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_MutonGunCV');
+	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_MutonGun');
 
 	Template.WeaponPanelImage = "_MagneticRifle";                       // used by the UI. Probably determines iconview of the weapon.
 	
@@ -1910,13 +1910,13 @@ static function X2DataTemplate CreateTemplate_PA_MutonGunCV()
 	Template.EquipSound = "Conventional_Weapon_Equip";
 	Template.RemoveTemplateAvailablility(Template.BITFIELD_GAMEAREA_Multiplayer);
 	Template.Tier = 0;
-	Template.RangeAccuracy = default.MUTONGUN_CONVENTIONAL_RANGE;
-	Template.BaseDamage = default.MutonRifle_Conventional_BaseDamage;
-	Template.Aim = default.MUTONGUN_CONVENTIONAL_AIM;
-	Template.CritChance = default.MUTONGUN_CONVENTIONAL_CRITCHANCE;
-	Template.iClipSize = default.MUTONGUN_CONVENTIONAL_CLIPSIZE;	
-	Template.iSoundRange = default.MUTONGUN_CONVENTIONAL_ISOUNDRANGE;
-	Template.iEnvironmentDamage = default.MUTONGUN_CONVENTIONAL_IENVIRONMENTDAMAGE;
+	Template.RangeAccuracy = class'X2Item_DefaultWeapons'.default.MEDIUM_CONVENTIONAL_RANGE;
+	Template.BaseDamage = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_CONVENTIONAL_BASEDAMAGE;
+	Template.Aim = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_CONVENTIONAL_AIM;
+	Template.CritChance = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_CONVENTIONAL_CRITCHANCE;
+	Template.iClipSize = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_CONVENTIONAL_ICLIPSIZE;
+	Template.iSoundRange = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_CONVENTIONAL_ISOUNDRANGE;
+	Template.iEnvironmentDamage = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_CONVENTIONAL_IENVIRONMENTDAMAGE;
 
 	Template.NumUpgradeSlots = default.ALIEN_FIREARM_UPGRADESLOTS;
 
@@ -1956,13 +1956,13 @@ static function X2DataTemplate CreateTemplate_PA_MutonGunLaser()
 	Template.EquipSound = "Beam_Weapon_Equip";
 	Template.RemoveTemplateAvailablility(Template.BITFIELD_GAMEAREA_Multiplayer);
 	Template.Tier = 150;
-	Template.RangeAccuracy = default.MUTONGUN_CONVENTIONAL_RANGE;
+	Template.RangeAccuracy = class'X2Item_DefaultWeapons'.default.MEDIUM_MAGNETIC_RANGE;
 	Template.BaseDamage = default.MutonRifle_Laser_BaseDamage;
 	Template.Aim = default.LASERWEAPONAIMBONUS;
-	Template.CritChance = default.MUTONGUN_LASER_CRITCHANCE;
-	Template.iClipSize = default.MUTONGUN_LASER_ICLIPSIZE;
-	Template.iSoundRange = default.MUTONGUN_LASER_ISOUNDRANGE;
-	Template.iEnvironmentDamage = default.MUTONGUN_LASER_IENVIRONMENTDAMAGE;
+	Template.CritChance = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_MAGNETIC_CRITCHANCE;
+	Template.iClipSize = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_MAGNETIC_ICLIPSIZE;
+	Template.iSoundRange = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_MAGNETIC_ISOUNDRANGE;
+	Template.iEnvironmentDamage = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_MAGNETIC_IENVIRONMENTDAMAGE;
 
 	Template.NumUpgradeSlots = default.ALIEN_FIREARM_UPGRADESLOTS;
 
@@ -2018,13 +2018,13 @@ static function X2DataTemplate CreateTemplate_PA_MutonGunMagnetic()
 	Template.EquipSound = "Magnetic_Weapon_Equip";
 	Template.RemoveTemplateAvailablility(Template.BITFIELD_GAMEAREA_Multiplayer);
 	Template.Tier = 160;
-	Template.RangeAccuracy = default.MUTONGUN_MAGNETIC_RANGE;
-	Template.BaseDamage = default.MutonRifle_Magnetic_BaseDamage;
-	Template.Aim = default.MUTONGUN_MAGNETIC_AIM;
-	Template.CritChance = default.MUTONGUN_MAGNETIC_CRITCHANCE;
-	Template.iClipSize = default.MUTONGUN_MAGNETIC_ICLIPSIZE;
-	Template.iSoundRange = default.MUTONGUN_MAGNETIC_ISOUNDRANGE;
-	Template.iEnvironmentDamage = default.MUTONGUN_MAGNETIC_IENVIRONMENTDAMAGE;
+	Template.RangeAccuracy = class'X2Item_DefaultWeapons'.default.MEDIUM_MAGNETIC_RANGE;
+	Template.BaseDamage = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_MAGNETIC_BASEDAMAGE;
+	Template.Aim = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_MAGNETIC_AIM;
+	Template.CritChance = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_MAGNETIC_CRITCHANCE;
+	Template.iClipSize = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_MAGNETIC_ICLIPSIZE;
+	Template.iSoundRange = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_MAGNETIC_ISOUNDRANGE;
+	Template.iEnvironmentDamage = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_MAGNETIC_IENVIRONMENTDAMAGE;
 	
 	Template.NumUpgradeSlots = default.ALIEN_FIREARM_UPGRADESLOTS;
 
@@ -2083,13 +2083,13 @@ static function X2DataTemplate CreateTemplate_PA_MutonGunCoil()
 	Template.EquipSound = "Magnetic_Weapon_Equip";
 	Template.RemoveTemplateAvailablility(Template.BITFIELD_GAMEAREA_Multiplayer);
 	Template.Tier = 170;
-	Template.RangeAccuracy = default.MUTONGUN_MAGNETIC_RANGE;
+	Template.RangeAccuracy = class'X2Item_DefaultWeapons'.default.MEDIUM_MAGNETIC_RANGE;
 	Template.BaseDamage = default.MutonRifle_Coil_BaseDamage;
-	Template.Aim = default.MUTONGUN_MAGNETIC_AIM;
-	Template.CritChance = default.MUTONGUN_MAGNETIC_CRITCHANCE;
-	Template.iClipSize = default.MUTONGUN_MAGNETIC_ICLIPSIZE;
-	Template.iSoundRange = default.MUTONGUN_MAGNETIC_ISOUNDRANGE;
-	Template.iEnvironmentDamage = default.MUTONGUN_MAGNETIC_IENVIRONMENTDAMAGE;
+	Template.Aim = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_MAGNETIC_AIM;
+	Template.CritChance = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_MAGNETIC_CRITCHANCE;
+	Template.iClipSize = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_MAGNETIC_ICLIPSIZE;
+	Template.iSoundRange = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_MAGNETIC_ISOUNDRANGE;
+	Template.iEnvironmentDamage = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_MAGNETIC_IENVIRONMENTDAMAGE;
 
 	Template.NumUpgradeSlots = default.ALIEN_FIREARM_UPGRADESLOTS;
 
@@ -2148,13 +2148,13 @@ static function X2DataTemplate CreateTemplate_PA_MutonGunBeam()
 	Template.RemoveTemplateAvailablility(Template.BITFIELD_GAMEAREA_Multiplayer);
 	Template.Tier = 180;
 
-	Template.RangeAccuracy = default.MUTONGUN_BEAM_RANGE;
-	Template.BaseDamage = default.MutonRifle_Beam_BaseDamage;
-	Template.Aim = default.MUTONGUN_BEAM_AIM;
-	Template.CritChance = default.MUTONGUN_BEAM_CRITCHANCE;
-	Template.iClipSize = default.MUTONGUN_BEAM_ICLIPSIZE;
-	Template.iSoundRange = default.MUTONGUN_BEAM_ISOUNDRANGE;
-	Template.iEnvironmentDamage = default.MUTONGUN_BEAM_IENVIRONMENTDAMAGE;
+	Template.RangeAccuracy = class'X2Item_DefaultWeapons'.default.MEDIUM_BEAM_RANGE;
+	Template.BaseDamage = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_BEAM_BASEDAMAGE;
+	Template.Aim = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_BEAM_AIM;
+	Template.CritChance = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_BEAM_CRITCHANCE;
+	Template.iClipSize = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_BEAM_ICLIPSIZE;
+	Template.iSoundRange = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_BEAM_ISOUNDRANGE;
+	Template.iEnvironmentDamage = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_BEAM_IENVIRONMENTDAMAGE;
 	
 	Template.NumUpgradeSlots = default.ALIEN_FIREARM_UPGRADESLOTS;
 
@@ -2196,11 +2196,11 @@ static function X2DataTemplate CreateTemplate_PA_MutonGunBeam()
 	return Template;
 }
 
-static function X2DataTemplate CreateTemplate_PA_MutonCannonCV()
+static function X2DataTemplate CreateTemplate_PA_MutonCannon()
 {
 	local X2WeaponTemplate Template;
 
-	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_MutonCannonCV');
+	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_MutonCannon');
 
 	Template.WeaponPanelImage = "_BeamCannon";                       // used by the UI. Probably determines iconview of the weapon.
 	
@@ -2211,13 +2211,13 @@ static function X2DataTemplate CreateTemplate_PA_MutonCannonCV()
 	Template.EquipSound = "Conventional_Weapon_Equip";
 	Template.RemoveTemplateAvailablility(Template.BITFIELD_GAMEAREA_Multiplayer);
 	Template.Tier = 0;
-	Template.RangeAccuracy = default.MUTONCANNON_CONVENTIONAL_RANGE;
-	Template.BaseDamage = default.MutonCannon_Conventional_BaseDamage;
-	Template.Aim = default.MUTONCANNON_CONVENTIONAL_AIM;
-	Template.CritChance = default.MUTONCANNON_CONVENTIONAL_CRITCHANCE;
-	Template.iClipSize = default.MUTONCANNON_CONVENTIONAL_ICLIPSIZE;
-	Template.iSoundRange = default.MUTONCANNON_CONVENTIONAL_ISOUNDRANGE;
-	Template.iEnvironmentDamage = default.MUTONCANNON_CONVENTIONAL_IENVIRONMENTDAMAGE;
+	Template.RangeAccuracy = default.LMG_ALL_RANGE;
+	Template.BaseDamage = class'X2Item_DefaultWeapons'.default.LMG_CONVENTIONAL_BASEDAMAGE;
+	Template.Aim = class'X2Item_DefaultWeapons'.default.LMG_CONVENTIONAL_AIM;
+	Template.CritChance = class'X2Item_DefaultWeapons'.default.LMG_CONVENTIONAL_CRITCHANCE;
+	Template.iClipSize = class'X2Item_DefaultWeapons'.default.LMG_CONVENTIONAL_ICLIPSIZE;
+	Template.iSoundRange = class'X2Item_DefaultWeapons'.default.LMG_CONVENTIONAL_ISOUNDRANGE;
+	Template.iEnvironmentDamage = class'X2Item_DefaultWeapons'.default.LMG_CONVENTIONAL_IENVIRONMENTDAMAGE;
 
 	Template.NumUpgradeSlots = default.ALIEN_FIREARM_UPGRADESLOTS;
 
@@ -2266,13 +2266,13 @@ static function X2DataTemplate CreateTemplate_PA_MutonCannonLaser()
 	Template.EquipSound = "Beam_Weapon_Equip";
 	Template.RemoveTemplateAvailablility(Template.BITFIELD_GAMEAREA_Multiplayer);
 	Template.Tier = 150;
-	Template.RangeAccuracy = default.MUTOMUTONCANNON_LASER_RANGE;
+	Template.RangeAccuracy = default.LMG_ALL_RANGE;
 	Template.BaseDamage = default.MutonCannon_Laser_BaseDamage;
 	Template.Aim = default.LASERWEAPONAIMBONUS;
-	Template.CritChance = default.MUTONCANNON_LASER_CRITCHANCE;
-	Template.iClipSize = default.MUTONCANNON_LASER_ICLIPSIZE;
-	Template.iSoundRange = default.MUTONCANNON_LASER_ISOUNDRANGE;
-	Template.iEnvironmentDamage = default.MUTONCANNON_LASER_IENVIRONMENTDAMAGE;
+	Template.CritChance = class'X2Item_DefaultWeapons'.default.LMG_MAGNETIC_CRITCHANCE;
+	Template.iClipSize = class'X2Item_DefaultWeapons'.default.LMG_MAGNETIC_ICLIPSIZE;
+	Template.iSoundRange = class'X2Item_DefaultWeapons'.default.LMG_MAGNETIC_ISOUNDRANGE;
+	Template.iEnvironmentDamage = class'X2Item_DefaultWeapons'.default.LMG_MAGNETIC_IENVIRONMENTDAMAGE;
 
 	Template.NumUpgradeSlots = default.ALIEN_FIREARM_UPGRADESLOTS;
 
@@ -2336,13 +2336,13 @@ static function X2DataTemplate CreateTemplate_PA_MutonCannonMagnetic()
 	Template.EquipSound = "Magnetic_Weapon_Equip";
 	Template.RemoveTemplateAvailablility(Template.BITFIELD_GAMEAREA_Multiplayer);
 	Template.Tier = 160;
-	Template.RangeAccuracy = default.MUTONCANNON_MAGNETIC_RANGE;
-	Template.BaseDamage = default.MutonCannon_Magnetic_BaseDamage;
-	Template.Aim = default.MUTONCANNON_MAGNETIC_AIM;
-	Template.CritChance = default.MUTONCANNON_MAGNETIC_CRITCHANCE;
-	Template.iClipSize = default.MUTONCANNON_MAGNETIC_ICLIPSIZE;
-	Template.iSoundRange = default.MUTONCANNON_MAGNETIC_ISOUNDRANGE;
-	Template.iEnvironmentDamage = default.MUTONCANNON_MAGNETIC_IENVIRONMENTDAMAGE;
+	Template.RangeAccuracy = default.LMG_ALL_RANGE;
+	Template.BaseDamage = class'X2Item_DefaultWeapons'.default.LMG_MAGNETIC_BASEDAMAGE;
+	Template.Aim = class'X2Item_DefaultWeapons'.default.LMG_MAGNETIC_AIM;
+	Template.CritChance = class'X2Item_DefaultWeapons'.default.LMG_MAGNETIC_CRITCHANCE;
+	Template.iClipSize = class'X2Item_DefaultWeapons'.default.LMG_MAGNETIC_ICLIPSIZE;
+	Template.iSoundRange = class'X2Item_DefaultWeapons'.default.LMG_MAGNETIC_ISOUNDRANGE;
+	Template.iEnvironmentDamage = class'X2Item_DefaultWeapons'.default.LMG_MAGNETIC_IENVIRONMENTDAMAGE;
 	
 	Template.NumUpgradeSlots = default.ALIEN_FIREARM_UPGRADESLOTS;
 
@@ -2409,13 +2409,13 @@ static function X2DataTemplate CreateTemplate_PA_MutonCannonCoil()
 	Template.EquipSound = "Magnetic_Weapon_Equip";
 	Template.RemoveTemplateAvailablility(Template.BITFIELD_GAMEAREA_Multiplayer);
 	Template.Tier = 170;
-	Template.RangeAccuracy = default.MUTONCANNON_COIL_RANGE;
+	Template.RangeAccuracy = default.LMG_ALL_RANGE;
 	Template.BaseDamage = default.MutonCannon_Coil_BaseDamage;
-	Template.Aim = default.MUTONCANNON_COIL_AIM;
-	Template.CritChance = default.MUTONCANNON_COIL_CRITCHANCE;
-	Template.iClipSize = default.MUTONCANNON_COIL_ICLIPSIZE;
-	Template.iSoundRange = default.MUTONCANNON_COIL_ISOUNDRANGE;
-	Template.iEnvironmentDamage = default.MUTONCANNON_COIL_IENVIRONMENTDAMAGE;
+	Template.Aim = class'X2Item_DefaultWeapons'.default.LMG_MAGNETIC_AIM;
+	Template.CritChance = class'X2Item_DefaultWeapons'.default.LMG_MAGNETIC_CRITCHANCE;
+	Template.iClipSize = class'X2Item_DefaultWeapons'.default.LMG_MAGNETIC_ICLIPSIZE;
+	Template.iSoundRange = class'X2Item_DefaultWeapons'.default.LMG_MAGNETIC_ISOUNDRANGE;
+	Template.iEnvironmentDamage = class'X2Item_DefaultWeapons'.default.LMG_MAGNETIC_IENVIRONMENTDAMAGE;
 
 	Template.NumUpgradeSlots = default.ALIEN_FIREARM_UPGRADESLOTS;
 
@@ -2482,13 +2482,13 @@ static function X2DataTemplate CreateTemplate_PA_MutonCannonBeam()
 	Template.RemoveTemplateAvailablility(Template.BITFIELD_GAMEAREA_Multiplayer);
 	Template.Tier = 180;
 
-	Template.RangeAccuracy = default.MUTONCANNON_BEAM_RANGE;
-	Template.BaseDamage = default.MutonCannon_Beam_BaseDamage;
-	Template.Aim = default.MUTONCANNON_BEAM_AIM;
-	Template.CritChance = default.MUTONCANNON_BEAM_CRITCHANCE;
-	Template.iClipSize = default.MUTONCANNON_BEAM_ICLIPSIZE;
-	Template.iSoundRange = default.MUTONCANNON_BEAM_ISOUNDRANGE;
-	Template.iEnvironmentDamage = default.MUTONCANNON_BEAM_IENVIRONMENTDAMAGE;
+	Template.RangeAccuracy = default.LMG_ALL_RANGE;
+	Template.BaseDamage = class'X2Item_DefaultWeapons'.default.LMG_BEAM_BASEDAMAGE;
+	Template.Aim = class'X2Item_DefaultWeapons'.default.LMG_BEAM_AIM;
+	Template.CritChance = class'X2Item_DefaultWeapons'.default.LMG_BEAM_CRITCHANCE;
+	Template.iClipSize = class'X2Item_DefaultWeapons'.default.LMG_BEAM_ICLIPSIZE;
+	Template.iSoundRange = class'X2Item_DefaultWeapons'.default.LMG_BEAM_ISOUNDRANGE;
+	Template.iEnvironmentDamage = class'X2Item_DefaultWeapons'.default.LMG_BEAM_IENVIRONMENTDAMAGE;
 	
 	Template.NumUpgradeSlots = default.ALIEN_FIREARM_UPGRADESLOTS;
 
@@ -2538,11 +2538,11 @@ static function X2DataTemplate CreateTemplate_PA_MutonCannonBeam()
 	return Template;
 }
 
-static function X2DataTemplate CreateTemplate_PA_MutonStalkerGunCV()
+static function X2DataTemplate CreateTemplate_PA_MutonStalkerGun()
 {
 	local X2WeaponTemplate Template;
 
-	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_MutonStalkerGunCV');
+	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_MutonStalkerGun');
 
 	Template.WeaponPanelImage = "_MagneticRifle";                       // used by the UI. Probably determines iconview of the weapon.
 	
@@ -2869,11 +2869,11 @@ static function X2DataTemplate CreateTemplate_PA_MutonStalkerGunBeam()
 	return Template;
 }
 
-static function X2DataTemplate CreateTemplate_PA_MutonBeleaguerGunCV()
+static function X2DataTemplate CreateTemplate_PA_MutonBeleaguerGun()
 {
 	local X2WeaponTemplate Template;
 
-	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_MutonBeleaguerGunCV');
+	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_MutonBeleaguerGun');
 
 	Template.WeaponPanelImage = "_MagneticRifle";                       // used by the UI. Probably determines iconview of the weapon.
 	
@@ -3185,11 +3185,11 @@ static function X2DataTemplate CreateTemplate_PA_MutonBeleaguerGunBeam()
 	return Template;
 }
 
-static function X2DataTemplate CreateTemplate_PA_MutonHarrierLauncherCV()
+static function X2DataTemplate CreateTemplate_PA_MutonHarrierLauncher()
 {
 	local X2WeaponTemplate Template;
 
-	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_MutonHarrierLauncherCV');
+	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_MutonHarrierLauncher');
 	
 	Template.WeaponPanelImage = "_ConventionalRifle";                       // used by the UI. Probably determines iconview of the weapon.
 	Template.ItemCat = 'weapon';
@@ -3517,11 +3517,11 @@ static function X2DataTemplate CreateTemplate_PA_MutonHarrierLauncherBeam()
 
 //SECTOIDS
 
-static function X2DataTemplate CreateTemplate_PA_SectoidGunCV()
+static function X2DataTemplate CreateTemplate_PA_SectoidGun()
 {
 	local X2WeaponTemplate Template;
 
-	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_SectoidGunCV');
+	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_SectoidGun');
 
 	Template.WeaponPanelImage = "_MagneticRifle";                       // used by the UI. Probably determines iconview of the weapon.
 	
@@ -3844,11 +3844,11 @@ static function X2DataTemplate CreateTemplate_PA_SectoidGunBeam()
 	return Template;
 }
 
-static function X2DataTemplate CreateTemplate_PA_SidewinderGunCV()
+static function X2DataTemplate CreateTemplate_PA_SidewinderGun()
 {
 	local X2WeaponTemplate Template;
 
-	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_SidewinderGunCV');
+	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_SidewinderGun');
 
 	Template.WeaponPanelImage = "_MagneticRifle";                       // used by the UI. Probably determines iconview of the weapon.
 	
@@ -4154,11 +4154,11 @@ static function X2DataTemplate CreateTemplate_PA_SidewinderGunBeam()
 	return Template;
 }
 
-static function X2DataTemplate CreateTemplate_PA_NajaGunCV()
+static function X2DataTemplate CreateTemplate_PA_NajaGun()
 {
 	local X2WeaponTemplate Template;
 
-	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_NajaGunCV');
+	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_NajaGun');
 
 	Template.WeaponPanelImage = "_MagneticRifle";                       // used by the UI. Probably determines iconview of the weapon.
 	
@@ -4469,11 +4469,11 @@ static function X2DataTemplate CreateTemplate_PA_NajaGunBeam()
 	return Template;
 }
 
-static function X2DataTemplate CreateTemplate_PA_ArchonGunCV()
+static function X2DataTemplate CreateTemplate_PA_ArchonGun()
 {
 	local X2WeaponTemplate Template;
 
-	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_ArchonGunCV');
+	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_ArchonGun');
 
 	Template.WeaponPanelImage = "_MagneticRifle";                       // used by the UI. Probably determines iconview of the weapon.
 	
@@ -4888,11 +4888,11 @@ static function X2DataTemplate CreateTemplate_PA_ArchonEliteBayonet()
 	return Template;
 }
 
-static function X2DataTemplate CreateTemplate_PA_FrostAdderGunCV()
+static function X2DataTemplate CreateTemplate_PA_FrostAdderGun()
 {
 	local X2WeaponTemplate Template;
 
-	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_FrostAdderGunCV');
+	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_FrostAdderGun');
 
 	Template.WeaponPanelImage = "_MagneticRifle";                       // used by the UI. Probably determines iconview of the weapon.
 	
@@ -5208,11 +5208,11 @@ static function X2DataTemplate CreateTemplate_PA_FrostAdderGunBeam()
 	return Template;
 }
 
-static function X2DataTemplate CreateTemplate_PA_FrostBomberGunCV()
+static function X2DataTemplate CreateTemplate_PA_FrostBomberGun()
 {
 	local X2WeaponTemplate Template;
 
-	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_FrostBomberGunCV');
+	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_FrostBomberGun');
 
 	Template.WeaponPanelImage = "_MagneticRifle";                       // used by the UI. Probably determines iconview of the weapon.
 	
@@ -5628,17 +5628,17 @@ static function X2DataTemplate CreateTemplate_PA_FrostBlob()
 	Template.GameArchetype = "WP_FrostDivisionRifle.WP_Andromedon_FrostBlobAttack";
 	Template.CanBeBuilt = false;
 
-	Template.iRange = default.PA_FrostBlobRange;
-	Template.iRadius = default.PA_FrostBlobRadius;
-	Template.iClipSize = default.PA_FrostBlobClipSize;
+	Template.iRange = 14;
+	Template.iRadius = 4;
+	Template.iClipSize = 1;
 	Template.InfiniteAmmo = true;
 	Template.StartingItem = true;
 	Template.bInfiniteItem = true;
-	Template.iSoundRange = default.PA_FrostBlobSoundRange;
+	Template.iSoundRange = 6;
 	Template.bSoundOriginatesFromOwnerLocation = false;
 
 	Template.BaseDamage.DamageType = 'Frost';
-	Template.BaseDamage = default.PA_FrostBlob_Damage;
+	Template.BaseDamage = default.PA_FROSTBLOB_BASEDAMAGE;
 	
 	Template.InventorySlot = eInvSlot_TertiaryWeapon;
 	Template.StowedLocation = eSlot_None;
@@ -5648,11 +5648,11 @@ static function X2DataTemplate CreateTemplate_PA_FrostBlob()
 	return Template;
 }
 
-static function X2DataTemplate CreateTemplate_PA_FrostNecromancerGunCV()
+static function X2DataTemplate CreateTemplate_PA_FrostNecromancerGun()
 {
 	local X2WeaponTemplate Template;
 
-	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_FrostNecromancerGunCV');
+	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PA_FrostNecromancerGun');
 
 	Template.WeaponPanelImage = "_MagneticRifle";                       // used by the UI. Probably determines iconview of the weapon.
 	
@@ -5664,7 +5664,7 @@ static function X2DataTemplate CreateTemplate_PA_FrostNecromancerGunCV()
 	Template.RemoveTemplateAvailablility(Template.BITFIELD_GAMEAREA_Multiplayer);
 	Template.Tier = 0;
 	Template.RangeAccuracy = class'X2Item_DefaultWeapons'.default.MEDIUM_CONVENTIONAL_RANGE;
-	Template.BaseDamage = default.FrostNecromancerBLASTER_CONVENTIONAL_BASEDAMAGE;
+	Template.BaseDamage = default.FROSTNECROMANCERBLASTER_CONVENTIONAL_BASEDAMAGE;
 	Template.Aim = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_CONVENTIONAL_AIM;
 	Template.CritChance = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_CONVENTIONAL_CRITCHANCE;
 	Template.iClipSize = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_CONVENTIONAL_ICLIPSIZE;
