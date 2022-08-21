@@ -245,7 +245,6 @@ var config WeaponDamageValue ANDROMEDONRIFLE_LASER_BASEDAMAGE;
 
 var config array<int> AndromedonRifle_Laser_Range;
 
-var config int ANDROMEDONRIFLE_LASER_AIM;
 var config int ANDROMEDONRIFLE_LASER_CRITCHANCE;
 var config int ANDROMEDONRIFLE_LASER_ICLIPSIZE;
 var config int ANDROMEDONRIFLE_LASER_ISOUNDRANGE;
@@ -298,6 +297,16 @@ var config int ANDROMEDONRIFLE_BEAM_IENVIRONMENTDAMAGE;
 //* ===========================================================================
 
 var config int PA_ViperTongueAim;
+
+//* -------------------------------------------------------
+//* Viper Acid Blob
+//* -------------------------------------------------------
+
+var config int PA_AcidBlobRange;
+var config int PA_AcidBlobRadius;
+var config int PA_AcidBlobClipSize;
+var config bool PA_AcidBlobInfiniteAmmo;
+var config int PA_AcidBlobSoundRange;
 
 //* -------------------------------------------------------
 //* SideWinder Rifle
@@ -739,14 +748,14 @@ static function X2DataTemplate CreateTemplate_PA_AndromedonGun()
 	Template.EquipSound = "Magnetic_Weapon_Equip";
 	Template.RemoveTemplateAvailablility(Template.BITFIELD_GAMEAREA_Multiplayer);
 	Template.Tier = 0;
-	Template.RangeAccuracy = default.LMG_ALL_RANGE;
-	Template.BaseDamage = class'X2Item_DefaultWeapons'.default.LMG_CONVENTIONAL_BASEDAMAGE;
-	Template.Aim = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_CONVENTIONAL_AIM;
-	Template.CritChance = class'X2Item_DefaultWeapons'.default.LMG_MAGNETIC_CRITCHANCE;
-	Template.iClipSize = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_CONVENTIONAL_ICLIPSIZE;
-	Template.iSoundRange = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_MAGNETIC_ISOUNDRANGE;
-	Template.iEnvironmentDamage = class'X2Item_DefaultWeapons'.default.LMG_MAGNETIC_IENVIRONMENTDAMAGE;
-	Template.iIdealRange = class'X2Item_DefaultWeapons'.default.ANDROMEDON_IDEALRANGE;
+	Template.RangeAccuracy = default.AndromedonRifle_Conventional_Range;
+	Template.BaseDamage = default.ANDROMEDONRIFLE_CONVENTIONAL_BASEDAMAGE;
+	Template.Aim = default.ANDROMEDONRIFLE_CONVENTIONAL_AIM;
+	Template.CritChance = default.ANDROMEDONRIFLE_CONVENTIONAL_CRITCHANCE;
+	Template.iClipSize = default.ANDROMEDONRIFLE_MAGNETIC_ICLIPSIZE;
+	Template.iSoundRange = default.ANDROMEDONRIFLE_CONVENTIONAL_ISOUNDRANGE;
+	Template.iEnvironmentDamage = default.ANDROMEDONRIFLE_CONVENTIONAL_IENVIRONMENTDAMAGE;
+	Template.iIdealRange = default.ANDROMEDON_IDEALRANGE;
 	Template.NumUpgradeSlots = default.ALIEN_FIREARM_UPGRADESLOTS;
 
 	Template.DamageTypeTemplateName = 'Projectile_BeamXCom';
@@ -789,14 +798,14 @@ static function X2DataTemplate CreateTemplate_PA_AndromedonGunLaser()
 	Template.EquipSound = "Magnetic_Weapon_Equip";
 	Template.RemoveTemplateAvailablility(Template.BITFIELD_GAMEAREA_Multiplayer);
 	Template.Tier = 150;
-	Template.RangeAccuracy = default.LMG_ALL_RANGE;
+	Template.RangeAccuracy = default.AndromedonRifle_Laser_Range;
 	Template.BaseDamage = default.AndromedonRifle_Laser_BaseDamage;
 	Template.Aim = default.LASERWEAPONAIMBONUS;
-	Template.CritChance = class'X2Item_DefaultWeapons'.default.LMG_MAGNETIC_CRITCHANCE;
-	Template.iClipSize = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_MAGNETIC_ICLIPSIZE;
-	Template.iSoundRange = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_MAGNETIC_ISOUNDRANGE;
-	Template.iEnvironmentDamage = class'X2Item_DefaultWeapons'.default.LMG_MAGNETIC_IENVIRONMENTDAMAGE;
-	Template.iIdealRange = class'X2Item_DefaultWeapons'.default.ANDROMEDON_IDEALRANGE;
+	Template.CritChance = default.ANDROMEDONRIFLE_LASER_CRITCHANCE;
+	Template.iClipSize = default.ANDROMEDONRIFLE_LASER_ICLIPSIZE;
+	Template.iSoundRange = default.ANDROMEDONRIFLE_LASER_ISOUNDRANGE;
+	Template.iEnvironmentDamage = default.ANDROMEDONRIFLE_LASER_IENVIRONMENTDAMAGE;
+	Template.iIdealRange = default.ANDROMEDON_IDEALRANGE;
 	
 	Template.NumUpgradeSlots = default.ALIEN_FIREARM_UPGRADESLOTS;
 
@@ -856,14 +865,14 @@ static function X2DataTemplate CreateTemplate_PA_AndromedonGunMagnetic()
 	Template.RemoveTemplateAvailablility(Template.BITFIELD_GAMEAREA_Multiplayer);
 	Template.Tier = 160;
 
-	Template.RangeAccuracy = default.LMG_ALL_RANGE;
-	Template.BaseDamage = class'X2Item_DefaultWeapons'.default.LMG_MAGNETIC_BASEDAMAGE;
-	Template.Aim = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_MAGNETIC_AIM;
-	Template.CritChance = class'X2Item_DefaultWeapons'.default.LMG_MAGNETIC_CRITCHANCE;
-	Template.iClipSize = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_MAGNETIC_ICLIPSIZE;
-	Template.iSoundRange = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_MAGNETIC_ISOUNDRANGE;
-	Template.iEnvironmentDamage = class'X2Item_DefaultWeapons'.default.LMG_MAGNETIC_IENVIRONMENTDAMAGE;
-	Template.iIdealRange = class'X2Item_DefaultWeapons'.default.ANDROMEDON_IDEALRANGE;
+	Template.RangeAccuracy = default.AndromedonRifle_Magnetic_Range;
+	Template.BaseDamage = default.ANDROMEDONRIFLE_MAGNETIC_BASEDAMAGE;
+	Template.Aim = default.ANDROMEDONRIFLE_MAGNETIC_AIM;
+	Template.CritChance = default.ANDROMEDONRIFLE_MAGNETIC_CRITCHANCE;
+	Template.iClipSize = default.ANDROMEDONRIFLE_MAGNETIC_ICLIPSIZE;
+	Template.iSoundRange = default.ANDROMEDONRIFLE_MAGNETIC_ISOUNDRANGE;
+	Template.iEnvironmentDamage = default.ANDROMEDONRIFLE_MAGNETIC_IENVIRONMENTDAMAGE;
+	Template.iIdealRange = default.ANDROMEDON_IDEALRANGE;
 	
 	Template.NumUpgradeSlots = default.ALIEN_FIREARM_UPGRADESLOTS;
 
@@ -923,14 +932,14 @@ static function X2DataTemplate CreateTemplate_PA_AndromedonGunCoil()
 	Template.EquipSound = "Magnetic_Weapon_Equip";
 	Template.RemoveTemplateAvailablility(Template.BITFIELD_GAMEAREA_Multiplayer);
 	Template.Tier = 170;
-	Template.RangeAccuracy = default.LMG_ALL_RANGE;
-	Template.BaseDamage = default.AndromedonRifle_Coil_BaseDamage;
-	Template.Aim = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_MAGNETIC_AIM;
-	Template.CritChance = class'X2Item_DefaultWeapons'.default.LMG_MAGNETIC_CRITCHANCE;
-	Template.iClipSize = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_MAGNETIC_ICLIPSIZE;
-	Template.iSoundRange = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_MAGNETIC_ISOUNDRANGE;
-	Template.iEnvironmentDamage = class'X2Item_DefaultWeapons'.default.LMG_MAGNETIC_IENVIRONMENTDAMAGE;
-	Template.iIdealRange = class'X2Item_DefaultWeapons'.default.ANDROMEDON_IDEALRANGE;
+	Template.RangeAccuracy = default.AndromedonRifle_Coil_Range;
+	Template.BaseDamage = default.ANDROMEDONRIFLE_COIL_BASEDAMAGE;
+	Template.Aim = default.ANDROMEDONRIFLE_COIL_AIM;
+	Template.CritChance = default.ANDROMEDONRIFLE_COIL_CRITCHANCE;
+	Template.iClipSize = default.ANDROMEDONRIFLE_COIL_ICLIPSIZE;
+	Template.iSoundRange = default.ANDROMEDONRIFLE_COIL_ISOUNDRANGE;
+	Template.iEnvironmentDamage = default.ANDROMEDONRIFLE_COIL_IENVIRONMENTDAMAGE;
+	Template.iIdealRange = default.ANDROMEDON_IDEALRANGE;
 	
 	Template.NumUpgradeSlots = default.ALIEN_FIREARM_UPGRADESLOTS;
 
@@ -992,14 +1001,14 @@ static function X2DataTemplate CreateTemplate_PA_AndromedonGunBeam()
 	Template.RemoveTemplateAvailablility(Template.BITFIELD_GAMEAREA_Multiplayer);
 	Template.Tier = 180;
 
-	Template.RangeAccuracy = default.LMG_ALL_RANGE;
-	Template.BaseDamage = class'X2Item_DefaultWeapons'.default.LMG_BEAM_BASEDAMAGE;
-	Template.Aim = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_BEAM_AIM;
-	Template.CritChance = class'X2Item_DefaultWeapons'.default.LMG_BEAM_CRITCHANCE;
-	Template.iClipSize = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_BEAM_ICLIPSIZE;
-	Template.iSoundRange = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_BEAM_ISOUNDRANGE;
-	Template.iEnvironmentDamage = class'X2Item_DefaultWeapons'.default.LMG_BEAM_IENVIRONMENTDAMAGE;
-	Template.iIdealRange = class'X2Item_DefaultWeapons'.default.ANDROMEDON_IDEALRANGE;
+	Template.RangeAccuracy = default.AndromedonRifle_Beam_Range;
+	Template.BaseDamage = default.ANDROMEDONRIFLE_BEAM_BASEDAMAGE;
+	Template.Aim = default.ANDROMEDONRIFLE_BEAM_AIM;
+	Template.CritChance = default.ANDROMEDONRIFLE_BEAM_CRITCHANCE;
+	Template.iClipSize = default.ANDROMEDONRIFLE_BEAM_ICLIPSIZE;
+	Template.iSoundRange = default.ANDROMEDONRIFLE_BEAM_ISOUNDRANGE;
+	Template.iEnvironmentDamage = default.ANDROMEDONRIFLE_BEAM_IENVIRONMENTDAMAGE;
+	Template.iIdealRange = default.ANDROMEDON_IDEALRANGE;
 	
 	Template.NumUpgradeSlots = default.ALIEN_FIREARM_UPGRADESLOTS;
 
@@ -1058,17 +1067,17 @@ static function X2DataTemplate CreateTemplate_PA_AcidBlob()
 	Template.GameArchetype = "WP_Andromedon_AcidAttack.WP_Andromedon_AcidAttack";
 	Template.CanBeBuilt = false;
 
-	Template.iRange = 14;
-	Template.iRadius = 4;
-	Template.iClipSize = 1;
-	Template.InfiniteAmmo = true;
-	Template.StartingItem = true;
+	Template.iRange = default.PA_AcidBlobRange; // 14
+	Template.iRadius = default.PA_AcidBlobRadius; // 4
+	Template.iClipSize = default.PA_AcidBlobClipSize; // 1
+	Template.InfiniteAmmo = default.PA_AcidBlobInfiniteAmmo; // true
+	Template.StartingItem = true; 
 	Template.bInfiniteItem = true;
-	Template.iSoundRange = 6;
+	Template.iSoundRange = default.PA_AcidBlobSoundRange; // 6
 	Template.bSoundOriginatesFromOwnerLocation = false;
 
 	Template.BaseDamage.DamageType = 'Acid';
-	Template.BaseDamage = class'X2Item_DefaultGrenades'.default.ANDROMEDON_ACIDBLOB_BASEDAMAGE;
+	Template.BaseDamage = default.PA_Viper_AcidBlob_BaseDamage; // (Damage=5, Spread=1, PlusOne=0, Crit=0, Pierce=0, Shred=3, Tag = "", DamageType="Acid")
 	
 	Template.InventorySlot = eInvSlot_SecondaryWeapon;
 	Template.StowedLocation = eSlot_None;
