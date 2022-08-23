@@ -22,11 +22,8 @@ static function array<X2DataTemplate> CreateTemplates()
 	Templates.AddItem(CreateTemplate_FrostBomber());
 	Templates.AddItem(CreateTemplate_FrostNecromancer());
 	Templates.AddItem(CreateTemplate_SectoidAbjurer());
-	
-	//Templates.AddItem(CreateTemplate_Cyberus());
+
 	Templates.AddItem(CreateTemplate_Archon());
-	//Templates.AddItem(CreateTemplate_Gatekeeper());
-	//Templates.AddItem(CreateTemplate_Sectopod());
 	Templates.AddItem(CreateTemplate_Sectoid());
 	Templates.AddItem(CreateTemplate_Muton());
 	Templates.AddItem(CreateTemplate_Viper());
@@ -442,12 +439,13 @@ static function X2CharacterTemplate CreateTemplate_Andromedon()
 	CharTemplate.DefaultSoldierClass = 'AndromedonClass';
 	CharTemplate.DefaultLoadout = 'PA_AndromedonLoadout';
 	CharTemplate.RequiredLoadout = 'RequiredSoldier';
-	//CharTemplate.Abilities.AddItem('AndromedonImmunities');
-	//CharTemplate.Abilities.AddItem('BigDamnPunch');
+	CharTemplate.Abilities.AddItem('AndromedonImmunities');
+	CharTemplate.Abilities.AddItem('BigDamnPunch');
 	CharTemplate.Abilities.AddItem('WallBreaking');
 	CharTemplate.Abilities.AddItem('WallSmash');
-	//CharTemplate.Abilities.AddItem('RobotBattlesuit');
-	//CharTemplate.Abilities.AddItem('ShellLauncher');
+	CharTemplate.Abilities.AddItem('PA_RobotBattlesuit');
+	CharTemplate.Abilities.AddItem('PA_SwitchToRobot');
+	CharTemplate.Abilities.AddItem('ShellLauncher');
 
 
 	CharTemplate.Abilities.AddItem('Loot');
