@@ -1367,7 +1367,7 @@ static function X2DataTemplate CreateTemplate_PA_AndromedonGun()
 	Template.BaseDamage = default.ANDROMEDONRIFLE_CONVENTIONAL_BASEDAMAGE;
 	Template.Aim = default.ANDROMEDONRIFLE_CONVENTIONAL_AIM;
 	Template.CritChance = default.ANDROMEDONRIFLE_CONVENTIONAL_CRITCHANCE;
-	Template.iClipSize = default.ANDROMEDONRIFLE_MAGNETIC_ICLIPSIZE;
+	Template.iClipSize = default.ANDROMEDONRIFLE_CONVENTIONAL_ICLIPSIZE;
 	Template.iSoundRange = default.ANDROMEDONRIFLE_CONVENTIONAL_ISOUNDRANGE;
 	Template.iEnvironmentDamage = default.ANDROMEDONRIFLE_CONVENTIONAL_IENVIRONMENTDAMAGE;
 	Template.iIdealRange = default.ANDROMEDON_IDEALRANGE;

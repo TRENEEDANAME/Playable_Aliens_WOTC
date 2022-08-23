@@ -10,18 +10,18 @@ var private bool bReceivedMeshSwapNotify;
 
 static function bool AllowOverrideActionDeath(VisualizationActionMetadata ActionMetadata, XComGameStateContext Context)
 {
-	local XComGameState_Unit AndromedonUnit;
+	local XComGameState_Unit PA_AndromedonUnit;
 	local XComGameStateHistory History;
 	local int i;
 	local XComGameStateContext TestContext;
 	local XComGameStateContext_Ability TestAbilityContext;
 	local bool bFoundAssociatedSwitch;
 
-	AndromedonUnit = XComGameState_Unit(ActionMetadata.StateObject_NewState);
+	PA_AndromedonUnit = XComGameState_Unit(ActionMetadata.StateObject_NewState);
 
 	// Check to see if the switch occurs if the unit is currently alive,
 	// otherwise use this override death action
-	if( (AndromedonUnit != none) )
+	if( (PA_AndromedonUnit != none) )
 	{
 		History = `XCOMHISTORY;
 
@@ -38,7 +38,7 @@ static function bool AllowOverrideActionDeath(VisualizationActionMetadata Action
 			if( TestAbilityContext != none &&
 				TestAbilityContext.DesiredVisualizationBlockIndex == Context.AssociatedState.HistoryIndex &&
 				TestAbilityContext.InputContext.AbilityTemplateName == 'PA_SwitchToRobot' &&
-				TestAbilityContext.InputContext.SourceObject.ObjectID == AndromedonUnit.ObjectID )
+				TestAbilityContext.InputContext.SourceObject.ObjectID == PA_AndromedonUnit.ObjectID )
 			{
 				// We found a SwitchToRobot that wants to visualize in this context, so do the switch
 				bFoundAssociatedSwitch = true;
@@ -55,7 +55,7 @@ static function bool AllowOverrideActionDeath(VisualizationActionMetadata Action
 
 function Init()
 {
-	local XComGameState_Unit AndromedonUnit, SpawnedRobotUnit;
+	local XComGameState_Unit PA_AndromedonUnit, SpawnedRobotUnit;
 	local UnitValue SpawnedUnitValue;
 	local XComGameStateHistory History;
 	local int i;
@@ -70,7 +70,7 @@ function Init()
 	// Search through the chain to find when the Andromedon's SwitchToRobot ability occurs
 	i = StateChangeContext.EventChainStartIndex;
 	Context = StateChangeContext;
-	while( (AndromedonUnit == none) && (!Context.bLastEventInChain))
+	while( (PA_AndromedonUnit == none) && (!Context.bLastEventInChain))
 	{
 		Context = History.GetGameStateFromHistory(i).GetContext();
 
@@ -81,14 +81,14 @@ function Init()
 			TestAbilityContext.InputContext.SourceObject.ObjectID == UnitPawn.ObjectID )
 		{
 			// Get the up to date version of this unit so we can find the associated spawned robot
-			AndromedonUnit = XComGameState_Unit(TestAbilityContext.AssociatedState.GetGameStateForObjectID(UnitPawn.ObjectID));
-			AndromedonUnit.GetUnitValue(class'X2Effect_SpawnUnit'.default.SpawnedUnitValueName, SpawnedUnitValue);
+			PA_AndromedonUnit = XComGameState_Unit(TestAbilityContext.AssociatedState.GetGameStateForObjectID(UnitPawn.ObjectID));
+			PA_AndromedonUnit.GetUnitValue(class'X2Effect_SpawnUnit'.default.SpawnedUnitValueName, SpawnedUnitValue);
 		}
 
 		++i;
 	}
 
-	if( AndromedonUnit == none )
+	if( PA_AndromedonUnit == none )
 	{
 		`RedScreenOnce("X2Action_AndromedonDeathAction: Andromedon not found, should have come from SwitchToRobot GameState -dslonneger @gameplay");
 	}
