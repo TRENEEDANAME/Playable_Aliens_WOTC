@@ -4,7 +4,7 @@
 
 class X2Action_PA_AndromedonDeathAction extends X2Action_PlayAnimation;
 
-var private StateObjectReference SpawnedRobotUnitReference;
+var private StateObjectReference SpawnedPA_RobotUnitReference;
 var private TTile CurrentTile;
 var private bool bReceivedMeshSwapNotify;
 
@@ -55,7 +55,7 @@ static function bool AllowOverrideActionDeath(VisualizationActionMetadata Action
 
 function Init()
 {
-	local XComGameState_Unit PA_AndromedonUnit, SpawnedRobotUnit;
+	local XComGameState_Unit PA_AndromedonUnit, SpawnedPA_RobotUnit;
 	local UnitValue SpawnedUnitValue;
 	local XComGameStateHistory History;
 	local int i;
@@ -93,13 +93,13 @@ function Init()
 		`RedScreenOnce("X2Action_AndromedonDeathAction: Andromedon not found, should have come from SwitchToRobot GameState -dslonneger @gameplay");
 	}
 
-	SpawnedRobotUnit = XComGameState_Unit(History.GetGameStateForObjectID(SpawnedUnitValue.fValue));
-	if( SpawnedRobotUnit == none )
+	SpawnedPA_RobotUnit = XComGameState_Unit(History.GetGameStateForObjectID(SpawnedUnitValue.fValue));
+	if( SpawnedPA_RobotUnit == none )
 	{
 		`RedScreenOnce("X2Action_AndromedonDeathAction: AndromedonRobot not found, Andromedon needs to have the reference -dslonneger @gameplay");
 	}
 
-	SpawnedRobotUnitReference = SpawnedRobotUnit.GetReference();
+	SpawnedPA_RobotUnitReference = SpawnedPA_RobotUnit.GetReference();
 }
 
 event OnAnimNotify(AnimNotify ReceiveNotify)
