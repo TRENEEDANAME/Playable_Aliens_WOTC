@@ -1,5 +1,4 @@
-class X2Ability_PA_AndromedonRobot extends X2Ability
-	config(GameData_SoldierSkills);
+class X2Ability_PA_AndromedonRobot extends X2Ability;
 
 static function array<X2DataTemplate> CreateTemplates()
 {
@@ -70,7 +69,7 @@ static function X2AbilityTemplate Create_PA_AcidTrailAbility()
 	EventListener.ListenerData.Deferral = ELD_OnStateSubmitted;
 	EventListener.ListenerData.EventID = 'UnitMoveFinished';
 	EventListener.ListenerData.Filter = eFilter_Unit;
-	EventListener.ListenerData.EventFn = BuildAcidTrail_Self;
+	EventListener.ListenerData.EventFn = BuildPA_AcidTrail_Self;
 	Template.AbilityTriggers.AddItem(EventListener);
 
 	// Targets the Andromedon unit so it can be replaced by the andromedon robot;
@@ -90,7 +89,7 @@ function XComGameState Empty_BuildGameState( XComGameStateContext Context )
 
 //Responds when the Andromedon robot has finished moving and creates a Acid trail along its path
 //Must be static, because the event listener source will be an XComGameState_Ability, not the X2Ability_AndromedonRobot.
-static function EventListenerReturn BuildAcidTrail_Self(Object EventData, Object EventSource, XComGameState GameState, Name Event, Object CallbackData)
+static function EventListenerReturn BuildPA_AcidTrail_Self(Object EventData, Object EventSource, XComGameState GameState, Name Event, Object CallbackData)
 {
 	local XComGameStateContext_Ability MoveContext;
 	local int TileIndex;	
@@ -163,7 +162,7 @@ static function X2AbilityTemplate Create_PA_RebootAbility()
 	local X2AbilityTemplate Template;
 	local X2AbilityTrigger_EventListener EventListener;
 
-	`CREATE_X2ABILITY_TEMPLATE(Template, 'RobotReboot');
+	`CREATE_X2ABILITY_TEMPLATE(Template, 'PA_RobotReboot');
 
 	Template.AbilitySourceName = 'eAbilitySource_Standard';
 	Template.eAbilityIconBehaviorHUD = EAbilityIconBehavior_NeverShow;
@@ -194,7 +193,7 @@ simulated function PA_RobotReboot_BuildVisualization(XComGameState VisualizeGame
 {
 	local XComGameStateContext_Ability Context;
 	local XComGameStateHistory History;
-	local VisualizationActionMetadata RobotUnitTrack;
+	local VisualizationActionMetadata PA_RobotUnitTrack;
 	local XComGameState_Unit RobotUnit;
 
 	Context = XComGameStateContext_Ability(VisualizeGameState.GetContext());
@@ -204,9 +203,9 @@ simulated function PA_RobotReboot_BuildVisualization(XComGameState VisualizeGame
 	`assert(RobotUnit != none);
 
 	// The Spawned unit should appear and play its change animation
-	RobotUnitTrack.StateObject_OldState = History.GetGameStateForObjectID(RobotUnit.ObjectID, eReturnType_Reference, VisualizeGameState.HistoryIndex - 1);
-	RobotUnitTrack.StateObject_NewState = RobotUnit;
-	RobotUnitTrack.VisualizeActor = History.GetVisualizer(RobotUnit.ObjectID);
+	PA_RobotUnitTrack.StateObject_OldState = History.GetGameStateForObjectID(RobotUnit.ObjectID, eReturnType_Reference, VisualizeGameState.HistoryIndex - 1);
+	PA_RobotUnitTrack.StateObject_NewState = RobotUnit;
+	PA_RobotUnitTrack.VisualizeActor = History.GetVisualizer(RobotUnit.ObjectID);
 
-	class'X2Action_PA_RebootRobot'.static.AddToVisualizationTree(RobotUnitTrack, Context);
+	class'X2Action_PA_RebootRobot'.static.AddToVisualizationTree(PA_RobotUnitTrack, Context);
 }
