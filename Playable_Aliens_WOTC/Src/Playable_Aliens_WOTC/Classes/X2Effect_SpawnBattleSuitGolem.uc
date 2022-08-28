@@ -124,7 +124,7 @@ function AddSpawnVisualizationsToTracks(XComGameStateContext Context, XComGameSt
 	class'X2Action_WaitForAbilityEffect'.static.AddToVisualizationTree(EffectTargetUnitTrack, Context);
 
 	// Setup the zombie actions
-	SpawnGolemEffect = EffectTargetUnit.GetUnitAffectedByEffectState(EffectName);
+	SpawnGolemEffect = EffectTargetUnit.GetUnitAffectedByEffectState(PA_EffectName);
 	`assert(SpawnGolemEffect != none);
 
 	// Copy the dead unit's appearance to the zombie
@@ -145,12 +145,9 @@ function AddSpawnVisualizationsToTracks(XComGameStateContext Context, XComGameSt
 
 defaultproperties
 {
-	UnitToSpawnName="AndromedonRobotMP"
 	TurnedGolemName="TurnedIntoGolem"
-	EffectName="SpawnGolemEffect"
+	PA_EffectName="SpawnGolemEffect"
 	AnimationName="HL_GetUp"
-	bClearTileBlockedByTargetUnitFlag=true
-	bCopyTargetAppearance=true
 	StartAnimationMinDelaySec=0.0f
 	StartAnimationMaxDelaySec=0.0f
 }

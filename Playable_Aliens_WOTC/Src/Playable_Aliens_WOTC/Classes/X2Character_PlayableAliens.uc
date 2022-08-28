@@ -7,8 +7,6 @@ var config(PlayableAdvent) bool AliensThatTakeCoverCanHunker;
 static function array<X2DataTemplate> CreateTemplates()
 {
 	local array<X2DataTemplate> Templates;
-	//Templates.AddItem(CreateTemplate_Chrys());
-	//Templates.AddItem(CreateTemplate_Mec());
 
 	Templates.AddItem(CreateTemplate_Berserker());
 	Templates.AddItem(CreateTemplate_Faceless());
@@ -28,6 +26,7 @@ static function array<X2DataTemplate> CreateTemplates()
 	Templates.AddItem(CreateTemplate_Muton());
 	Templates.AddItem(CreateTemplate_Viper());
 	Templates.AddItem(CreateTemplate_Andromedon());
+	Templates.AddItem(CreateTemplate_PA_AndromedonRobot());
 	return Templates;
 }
 
@@ -495,6 +494,73 @@ static function X2CharacterTemplate CreateTemplate_Andromedon()
 	CharTemplate.strTargetIconImage = class'UIUtilities_Image'.const.TargetIcon_Alien;
 	CharTemplate.strAutoRunNonAIBT = "SoldierAutoRunTree";
 	CharTemplate.CharacterGeneratorClass = class'XGCharacterGenerator_PlayableAliens';
+
+	return CharTemplate;
+}
+
+static function X2CharacterTemplate CreateTemplate_PA_AndromedonRobot()
+{
+	local X2CharacterTemplate CharTemplate;
+	local LootReference Loot;
+
+	`CREATE_X2CHARACTER_TEMPLATE(CharTemplate, 'PA_AndromedonRobot');
+	CharTemplate.CharacterGroupName = 'AndromedonRobot';
+	CharTemplate.DefaultLoadout='AndromedonRobot_Loadout';
+	CharTemplate.BehaviorClass=class'XGAIBehavior';
+	CharTemplate.strPawnArchetypes.AddItem("GameUnit_Andromedon.ARC_GameUnit_Andromedon_Robot_Suit");
+	Loot.ForceLevel=0;
+	Loot.LootTableName='AndromedonRobot_BaseLoot';
+	CharTemplate.Loot.LootReferences.AddItem(Loot);
+
+	// Timed Loot
+	//Loot.ForceLevel = 0;
+	//Loot.LootTableName = 'AndromedonRobot_TimedLoot';
+	//CharTemplate.TimedLoot.LootReferences.AddItem(Loot);
+	//Loot.LootTableName = 'AndromedonRobot_VultureLoot';
+	//CharTemplate.VultureLoot.LootReferences.AddItem(Loot);
+
+	CharTemplate.strMatineePackages.AddItem("CIN_Andromedon");
+	CharTemplate.strMatineePackages.AddItem("CIN_Muton");
+	CharTemplate.strTargetingMatineePrefix = "CIN_Muton_FF_StartPos";
+
+	CharTemplate.UnitSize = 1;
+	// Traversal Rules
+	CharTemplate.bCanUse_eTraversal_Normal = true;
+	CharTemplate.bCanUse_eTraversal_ClimbOver = true;
+	CharTemplate.bCanUse_eTraversal_ClimbOnto = true;
+	CharTemplate.bCanUse_eTraversal_ClimbLadder = true;
+	CharTemplate.bCanUse_eTraversal_DropDown = true;
+	CharTemplate.bCanUse_eTraversal_Grapple = false;
+	CharTemplate.bCanUse_eTraversal_Landing = true;
+	CharTemplate.bCanUse_eTraversal_BreakWindow = false;
+	CharTemplate.bCanUse_eTraversal_KickDoor = false;
+	CharTemplate.bCanUse_eTraversal_JumpUp = false;
+	CharTemplate.bCanUse_eTraversal_WallClimb = false;
+	CharTemplate.bCanUse_eTraversal_BreakWall = false;
+	CharTemplate.bAppearanceDefinesPawn = false;    
+	CharTemplate.bCanTakeCover = false;
+
+	CharTemplate.bIsAlien = true;
+	CharTemplate.bIsAdvent = false;
+	CharTemplate.bIsCivilian = false;
+	CharTemplate.bIsPsionic = false;
+	CharTemplate.bIsRobotic = true;
+	CharTemplate.bIsSoldier = false;
+
+	CharTemplate.bAllowSpawnFromATT = false;
+
+	CharTemplate.bCanBeTerrorist = false;
+	CharTemplate.bCanBeCriticallyWounded = false;
+	CharTemplate.bIsAfraidOfFire = false;
+	
+	CharTemplate.MPPointValue = CharTemplate.XpKillscore * 10;
+
+	CharTemplate.Abilities.AddItem('PA_AndromedonRobotImmunities');
+	CharTemplate.Abilities.AddItem('BigDamnPunch');
+	CharTemplate.Abilities.AddItem('PA_AndromedonRobotAcidTrail');
+	CharTemplate.Abilities.AddItem('WallBreaking');
+	CharTemplate.Abilities.AddItem('PA_WallSmash');
+	CharTemplate.Abilities.AddItem('PA_RobotReboot');
 
 	return CharTemplate;
 }

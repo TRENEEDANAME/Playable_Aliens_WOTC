@@ -12,11 +12,11 @@ var config array<int> LMG_ALL_RANGE;
 //* Muton Bayonet
 //* -------------------------------------------------------
 
-var config WeaponDamageValue MUTON_BAYONET_BASEDAMAGE;
+var config WeaponDamageValue Muton_Bayonet_BaseDamage;
 
 // -------------------------------------------------------
 
-var config WeaponDamageValue MUTON_ELITEBAYONET_BASEDAMAGE;
+var config WeaponDamageValue Muton_EliteBayonet_BaseDamage;
 
 //* -------------------------------------------------------
 //* Muton Rifle - Conventional
@@ -86,73 +86,72 @@ var config WeaponDamageValue MutonCannon_Beam_BaseDamage;
 //* Muton Stalker - Conventional
 //* -------------------------------------------------------
 
-var config WeaponDamageValue MUTONSTALKERGUN_CONVENTIONAL_BASEDAMAGE;
+var config WeaponDamageValue Muton_StalkerGun_Conventional_BaseDamage;
 
-var config array<int> MUTONSTALKERGUN_CONVENTIONAL_RANGE;
+var config array<int> Muton_StalkerGun_Conventional_Range;
 
-var config int MUTONSTALKERGUN_CONVENTIONAL_AIM;
-var config int MUTONSTALKERGUN_CONVENTIONAL_CRITCHANCE;
-var config int MUTONSTALKERGUN_CONVENTIONAL_CLIPSIZE;
-var config int MUTONSTALKERGUN_CONVENTIONAL_ISOUNDRANGE;
-var config int MUTONSTALKERGUN_CONVENTIONAL_IENVIRONMENTDAMAGE;
+var config int Muton_StalkerGun_Conventional_Aim;
+var config int Muton_StalkerGun_Conventional_CritChance;
+var config int Muton_StalkerGun_Conventional_ClipSize;
+var config int Muton_StalkerGun_Conventional_ISoundRange;
+var config int Muton_StalkerGun_Conventional_IEnvDamage;
 
 //* -------------------------------------------------------
 //* Muton Stalker - Laser
 //* -------------------------------------------------------
 
-var config WeaponDamageValue MUTONSTALKERGUN_LASER_BASEDAMAGE;
+var config WeaponDamageValue Muton_StalkerGun_Laser_BaseDamage;
 
-var config array<int> MUTONSTALKERGUN_LASER_RANGE;
+var config array<int> Muton_StalkerGun_Laser_Range;
 
-var config int MUTONSTALKERGUN_LASER_AIM;
-var config int MUTONSTALKERGUN_LASER_CRITCHANCE;
-var config int MUTONSTALKERGUN_LASER_CLIPSIZE;
-var config int MUTONSTALKERGUN_LASER_ISOUNDRANGE;
-var config int MUTONSTALKERGUN_LASER_IENVIRONMENTDAMAGE;
+var config int Muton_StalkerGun_Laser_Aim;
+var config int Muton_StalkerGun_Laser_CritChance;
+var config int Muton_StalkerGun_Laser_ClipSize;
+var config int Muton_StalkerGun_Laser_ISoundRange;
+var config int Muton_StalkerGun_Laser_IEnvDamage;
 
 //* -------------------------------------------------------
 //* Muton Stalker - Magnetic
 //* -------------------------------------------------------
 
+var config WeaponDamageValue Muton_StalkerGun_Magnetic_BaseDamage;
 
-var config WeaponDamageValue MUTONSTALKERGUN_MAGNETIC_BASEDAMAGE;
+var config array<int> Muton_StalkerGun_Magnetic_Range;
 
-var config array<int> MUTONSTALKERGUN_MAGNETIC_RANGE;
-
-var config int MUTONSTALKERGUN_MAGNETIC_AIM;
-var config int MUTONSTALKERGUN_MAGNETIC_CRITCHANCE;
-var config int MUTONSTALKERGUN_MAGNETIC_CLIPSIZE;
-var config int MUTONSTALKERGUN_MAGNETIC_ISOUNDRANGE;
-var config int MUTONSTALKERGUN_MAGNETIC_IENVIRONMENTDAMAGE;
+var config int Muton_StalkerGun_Magnetic_Aim;
+var config int Muton_StalkerGun_Magnetic_CritChance;
+var config int Muton_StalkerGun_Magnetic_ClipSize;
+var config int Muton_StalkerGun_Magnetic_ISoundRange;
+var config int Muton_StalkerGun_Magnetic_IEnvDamage;
 
 
 //* -------------------------------------------------------
 //* Muton Stalker - Coil
 //* -------------------------------------------------------
 
-var config WeaponDamageValue MUTONSTALKERGUN_COIL_BASEDAMAGE;
+var config WeaponDamageValue Muton_StalkerGun_Coil_BaseDamage;
 
-var config array<int> MUTONSTALKERGUN_COIL_RANGE;
+var config array<int> Muton_StalkerGun_Coil_Range;
 
-var config int MUTONSTALKERGUN_COIL_AIM;
-var config int MUTONSTALKERGUN_COIL_CRITCHANCE;
-var config int MUTONSTALKERGUN_COIL_CLIPSIZE;
-var config int MUTONSTALKERGUN_COIL_ISOUNDRANGE;
-var config int MUTONSTALKERGUN_COIL_IENVIRONMENTDAMAGE;
+var config int Muton_StalkerGun_Coil_Aim;
+var config int Muton_StalkerGun_Coil_CritChance;
+var config int Muton_StalkerGun_Coil_ClipSize;
+var config int Muton_StalkerGun_Coil_ISoundRange;
+var config int Muton_StalkerGun_Coil_IEnvDamage;
 
 //* -------------------------------------------------------
 //* Muton Stalker - Beam
 //* -------------------------------------------------------
 
-var config WeaponDamageValue MUTONSTALKERGUN_BEAM_BASEDAMAGE;
+var config WeaponDamageValue Muton_StalkerGun_Beam_BaseDamage;
 
-var config array<int> MUTONSTALKERGUN_BEAM_RANGE;
+var config array<int> Muton_StalkerGun_Beam_Range;
 
-var config int MUTONSTALKERGUN_BEAM_AIM;
-var config int MUTONSTALKERGUN_BEAM_CRITCHANCE;
-var config int MUTONSTALKERGUN_BEAM_CLIPSIZE;
-var config int MUTONSTALKERGUN_BEAM_ISOUNDRANGE;
-var config int MUTONSTALKERGUN_BEAM_IENVIRONMENTDAMAGE;
+var config int Muton_StalkerGun_Beam_Aim;
+var config int Muton_StalkerGun_Beam_CritChance;
+var config int Muton_StalkerGun_Beam_ClipSize;
+var config int Muton_StalkerGun_Beam_ISoundRange;
+var config int Muton_StalkerGun_Beam_IEnvDamage;
 
 //* ===========================================================================
 //* Muton Beleague
@@ -2162,7 +2161,7 @@ static function X2DataTemplate CreateTemplate_PA_MutonBayonet()
 	Template.InfiniteAmmo = true;
 	Template.iPhysicsImpulse = 5;
 	Template.iIdealRange = 1;
-	Template.BaseDamage = default.MUTON_BAYONET_BASEDAMAGE;
+	Template.BaseDamage = default.Muton_Bayonet_BaseDamage;
 	Template.BaseDamage.DamageType='Melee';
 	Template.iSoundRange = 2;
 	Template.iEnvironmentDamage = 5;
@@ -2196,7 +2195,7 @@ static function X2DataTemplate CreateTemplate_PA_MutonEliteBayonet()
 	Template.InfiniteAmmo = true;
 	Template.iPhysicsImpulse = 5;
 	Template.iIdealRange = 1;
-	Template.BaseDamage = default.MUTON_ELITEBAYONET_BASEDAMAGE;
+	Template.BaseDamage = default.Muton_EliteBayonet_BaseDamage;
 	Template.BaseDamage.DamageType='Melee';
 	Template.iSoundRange = 2;
 	Template.iEnvironmentDamage = 10;
@@ -2885,13 +2884,13 @@ static function X2DataTemplate CreateTemplate_PA_MutonStalkerGun()
 	Template.EquipSound = "Conventional_Weapon_Equip";
 	Template.RemoveTemplateAvailablility(Template.BITFIELD_GAMEAREA_Multiplayer);
 	Template.Tier = 0;
-	Template.RangeAccuracy = default.MUTONSTALKERGUN_CONVENTIONAL_RANGE;
-	Template.BaseDamage = default.MUTONSTALKERGUN_CONVENTIONAL_BASEDAMAGE;
-	Template.Aim = default.MUTONSTALKERGUN_CONVENTIONAL_AIM;
-	Template.CritChance = default.MUTONSTALKERGUN_CONVENTIONAL_CRITCHANCE;
-	Template.iClipSize = default.MUTONSTALKERGUN_CONVENTIONAL_CLIPSIZE;
-	Template.iSoundRange = default.MUTONSTALKERGUN_CONVENTIONAL_ISOUNDRANGE;
-	Template.iEnvironmentDamage = default.MUTONSTALKERGUN_CONVENTIONAL_IENVIRONMENTDAMAGE;
+	Template.RangeAccuracy = default.Muton_StalkerGun_Conventional_Range;
+	Template.BaseDamage = default.Muton_StalkerGun_Conventional_BaseDamage;
+	Template.Aim = default.Muton_StalkerGun_Conventional_Aim;
+	Template.CritChance = default.Muton_StalkerGun_Conventional_CritChance;
+	Template.iClipSize = default.Muton_StalkerGun_Conventional_ClipSize;
+	Template.iSoundRange = default.Muton_StalkerGun_Conventional_ISoundRange;
+	Template.iEnvironmentDamage = default.Muton_StalkerGun_Conventional_IEnvDamage;
 
 	Template.NumUpgradeSlots = default.ALIEN_FIREARM_UPGRADESLOTS;
 
@@ -2934,13 +2933,13 @@ static function X2DataTemplate CreateTemplate_PA_MutonStalkerGunLaser()
 	Template.EquipSound = "Beam_Weapon_Equip";
 	Template.RemoveTemplateAvailablility(Template.BITFIELD_GAMEAREA_Multiplayer);
 	Template.Tier = 150;
-	Template.RangeAccuracy = default.MUTONSTALKERGUN_CONVENTIONAL_RANGE;
-	Template.BaseDamage = default.MUTONSTALKERGUN_CONVENTIONAL_BASEDAMAGE;
-	Template.Aim = default.MUTONSTALKERGUN_CONVENTIONAL_AIM;
-	Template.CritChance = default.MUTONSTALKERGUN_CONVENTIONAL_CRITCHANCE;
-	Template.iClipSize = default.MUTONSTALKERGUN_CONVENTIONAL_CLIPSIZE;
-	Template.iSoundRange = default.MUTONSTALKERGUN_CONVENTIONAL_ISOUNDRANGE;
-	Template.iEnvironmentDamage = default.MUTONSTALKERGUN_CONVENTIONAL_IENVIRONMENTDAMAGE;
+	Template.RangeAccuracy = default.Muton_StalkerGun_Laser_Range;
+	Template.BaseDamage = default.Muton_StalkerGun_Laser_BaseDamage;
+	Template.Aim = default.Muton_StalkerGun_Laser_Aim;
+	Template.CritChance = default.Muton_StalkerGun_Laser_CritChance;
+	Template.iClipSize = default.Muton_StalkerGun_Laser_ClipSize;
+	Template.iSoundRange = default.Muton_StalkerGun_Laser_ISoundRange;
+	Template.iEnvironmentDamage = default.Muton_StalkerGun_Laser_IEnvDamage;
 
 	Template.NumUpgradeSlots = default.ALIEN_FIREARM_UPGRADESLOTS;
 
@@ -3003,13 +3002,13 @@ static function X2DataTemplate CreateTemplate_PA_MutonStalkerGunMagnetic()
 	Template.EquipSound = "Magnetic_Weapon_Equip";
 	Template.RemoveTemplateAvailablility(Template.BITFIELD_GAMEAREA_Multiplayer);
 	Template.Tier = 160;
-	Template.RangeAccuracy = default.MUTONSTALKERGUN_LASER_RANGE;
-	Template.BaseDamage = default.MUTONSTALKERGUN_LASER_BASEDAMAGE;
-	Template.Aim = default.MUTONSTALKERGUN_LASER_AIM;
-	Template.CritChance = default.MUTONSTALKERGUN_LASER_CRITCHANCE;
-	Template.iClipSize = default.MUTONSTALKERGUN_LASER_CLIPSIZE;
-	Template.iSoundRange = default.MUTONSTALKERGUN_LASER_ISOUNDRANGE;
-	Template.iEnvironmentDamage = default.MUTONSTALKERGUN_LASER_IENVIRONMENTDAMAGE;
+	Template.RangeAccuracy = default.Muton_StalkerGun_Magnetic_Range;
+	Template.BaseDamage = default.Muton_StalkerGun_Magnetic_BaseDamage;
+	Template.Aim = default.Muton_StalkerGun_Magnetic_Aim;
+	Template.CritChance = default.Muton_StalkerGun_Magnetic_CritChance;
+	Template.iClipSize = default.Muton_StalkerGun_Magnetic_ClipSize;
+	Template.iSoundRange = default.Muton_StalkerGun_Magnetic_ISoundRange;
+	Template.iEnvironmentDamage = default.Muton_StalkerGun_Magnetic_IEnvDamage;
 	
 	Template.NumUpgradeSlots = default.ALIEN_FIREARM_UPGRADESLOTS;
 
@@ -3075,13 +3074,13 @@ static function X2DataTemplate CreateTemplate_PA_MutonStalkerGunCoil()
 	Template.EquipSound = "Magnetic_Weapon_Equip";
 	Template.RemoveTemplateAvailablility(Template.BITFIELD_GAMEAREA_Multiplayer);
 	Template.Tier = 170;
-	Template.RangeAccuracy = default.MUTONSTALKERGUN_MAGNETIC_RANGE;
-	Template.BaseDamage = default.MUTONSTALKERGUN_MAGNETIC_BASEDAMAGE;
-	Template.Aim = default.MUTONSTALKERGUN_MAGNETIC_AIM;
-	Template.CritChance = default.MUTONSTALKERGUN_MAGNETIC_CRITCHANCE;
-	Template.iClipSize = default.MUTONSTALKERGUN_MAGNETIC_CLIPSIZE;
-	Template.iSoundRange = default.MUTONSTALKERGUN_MAGNETIC_ISOUNDRANGE;
-	Template.iEnvironmentDamage = default.MUTONSTALKERGUN_MAGNETIC_IENVIRONMENTDAMAGE;
+	Template.RangeAccuracy = default.Muton_StalkerGun_Coil_Range;
+	Template.BaseDamage = default.Muton_StalkerGun_Coil_BaseDamage;
+	Template.Aim = default.Muton_StalkerGun_Coil_Aim;
+	Template.CritChance = default.Muton_StalkerGun_Coil_CritChance;
+	Template.iClipSize = default.Muton_StalkerGun_Coil_ClipSize;
+	Template.iSoundRange = default.Muton_StalkerGun_Coil_ISoundRange;
+	Template.iEnvironmentDamage = default.Muton_StalkerGun_Coil_IEnvDamage;
 
 	Template.NumUpgradeSlots = default.ALIEN_FIREARM_UPGRADESLOTS;
 
@@ -3146,13 +3145,13 @@ static function X2DataTemplate CreateTemplate_PA_MutonStalkerGunBeam()
 	Template.EquipSound = "Beam_Weapon_Equip";
 	Template.RemoveTemplateAvailablility(Template.BITFIELD_GAMEAREA_Multiplayer);
 	Template.Tier = 180;
-	Template.RangeAccuracy = default.MUTONSTALKERGUN_COIL_RANGE;
-	Template.BaseDamage = default.MUTONSTALKERGUN_COIL_BASEDAMAGE;
-	Template.Aim = default.MUTONSTALKERGUN_COIL_AIM;
-	Template.CritChance = default.MUTONSTALKERGUN_COIL_CRITCHANCE;
-	Template.iClipSize = default.MUTONSTALKERGUN_COIL_CLIPSIZE;
-	Template.iSoundRange = default.MUTONSTALKERGUN_COIL_ISOUNDRANGE;
-	Template.iEnvironmentDamage = default.MUTONSTALKERGUN_COIL_IENVIRONMENTDAMAGE;
+	Template.RangeAccuracy = default.Muton_StalkerGun_Beam_Range;
+	Template.BaseDamage = default.Muton_StalkerGun_Beam_BaseDamage;
+	Template.Aim = default.Muton_StalkerGun_Beam_Aim;
+	Template.CritChance = default.Muton_StalkerGun_Beam_CritChance;
+	Template.iClipSize = default.Muton_StalkerGun_Beam_ClipSize;
+	Template.iSoundRange = default.Muton_StalkerGun_Beam_ISoundRange;
+	Template.iEnvironmentDamage = default.Muton_StalkerGun_Beam_IEnvDamage;
 	
 	Template.NumUpgradeSlots = default.ALIEN_FIREARM_UPGRADESLOTS;
 

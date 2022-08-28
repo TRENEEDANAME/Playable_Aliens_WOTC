@@ -17,7 +17,7 @@ static function X2AbilityTemplate Create_PA_ImmunitiesAbility()
 	local X2AbilityTrigger_UnitPostBeginPlay Trigger;
 	local X2Effect_DamageImmunity DamageImmunity;
 
-	`CREATE_X2ABILITY_TEMPLATE(Template, 'AndromedonRobotImmunities');
+	`CREATE_X2ABILITY_TEMPLATE(Template, 'PA_AndromedonRobotImmunities');
 	Template.IconImage = "img:///UILibrary_PerkIcons.UIPerk_andromedon_robotbattlesuit"; // TODO: This needs to be changed
 
 	Template.AbilitySourceName = 'eAbilitySource_Perk';
