@@ -492,6 +492,5 @@
     <Content Include="Config\XcomStrategyTuning.Ini" />
     <Content Include="Src\Playable_Aliens_WOTC\Classes\X2Ability_PA_AndromedonRobot.uc" />
     <Content Include="Src\Playable_Aliens_WOTC\Classes\X2Action_PA_AndromedonDeathAction.uc" />
-    <Content Include="Src\Playable_Aliens_WOTC\Classes\X2Action_PA_RebootRobot.uc" />
   </ItemGroup>
 </Project>

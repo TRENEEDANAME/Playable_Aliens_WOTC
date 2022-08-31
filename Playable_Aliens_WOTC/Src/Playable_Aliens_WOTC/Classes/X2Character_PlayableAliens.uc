@@ -442,9 +442,11 @@ static function X2CharacterTemplate CreateTemplate_Andromedon()
 	CharTemplate.Abilities.AddItem('BigDamnPunch');
 	CharTemplate.Abilities.AddItem('WallBreaking');
 	CharTemplate.Abilities.AddItem('WallSmash');
-	CharTemplate.Abilities.AddItem('PA_RobotBattlesuit');
-	CharTemplate.Abilities.AddItem('PA_SwitchToRobot');
 	CharTemplate.Abilities.AddItem('ShellLauncher');
+	// This is for the robot suit
+	CharTemplate.Abilities.AddItem('SwitchToRobotMP');
+	CharTemplate.Abilities.AddItem('BigDamnPunchMP');
+	CharTemplate.Abilities.AddItem('PA_RobotBattlesuit');
 
 
 	CharTemplate.Abilities.AddItem('Loot');
