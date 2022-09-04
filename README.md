@@ -12,7 +12,7 @@ This will be the most up to date project folder from the mod, even before it's o
 - Start the SDK, go in file then "open mod project" (you will need to extract the project's folder).
 - Then do your changes (DO NOT CHANGES the `XcomEditor.ini`, `XcomEngine.ini` and `XcomGame.ini` or the mod will throw in an errors. In general, don't change the content in the `.uc` file unless you know what you are doing)
 
-### Mosd used by this mod
+### Mods used by this mod
 
 #### Required mods (as of September 2022)
 
