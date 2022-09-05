@@ -335,3 +335,9 @@ static function bool IsModActive(name ModName)
     }
     return false;
 }
+
+	// static function bool IsModActive(name WOTCIridarWeaponOverhaulVanilla)
+	// if (class'X2DownloadableContentInfo_Playable_Aliens_WOTC'.static.IsModActive('WotC_Gameplay_GeneModding'))
+	// 	{
+	// 	CharTemplate.Tech.AddItem('IRI_SecondaryHeart');
+	// 	}

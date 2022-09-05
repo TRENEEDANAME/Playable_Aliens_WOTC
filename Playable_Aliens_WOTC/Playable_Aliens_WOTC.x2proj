@@ -339,9 +339,6 @@
     <Content Include="Src\Playable_Aliens_WOTC\Classes\X2Effect_RussianRoulette.uc">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Src\Playable_Aliens_WOTC\Classes\X2Effect_SpawnBattleSuitGolem.uc">
-      <SubType>Content</SubType>
-    </Content>
     <Content Include="Src\Playable_Aliens_WOTC\Classes\X2Effect_WOTC_APA_Class_AddAbilitiesToTarget.uc">
       <SubType>Content</SubType>
     </Content>
@@ -492,5 +489,6 @@
     <Content Include="Config\XcomStrategyTuning.Ini" />
     <Content Include="Src\Playable_Aliens_WOTC\Classes\X2Ability_PA_AndromedonRobot.uc" />
     <Content Include="Src\Playable_Aliens_WOTC\Classes\X2Action_PA_AndromedonDeathAction.uc" />
+    <Content Include="Src\Playable_Aliens_WOTC\Classes\X2Effect_PA_SwitchToRobot.uc" />
   </ItemGroup>
 </Project>
