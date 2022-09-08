@@ -1,5 +1,7 @@
 class X2Effect_PA_SwitchToRobot extends X2Effect_SpawnUnit;
 
+var bool bForceDead;
+
 function ETeam GetTeam(const out EffectAppliedData ApplyEffectParameters)
 {
 	return GetTargetUnitsTeam(ApplyEffectParameters, true);

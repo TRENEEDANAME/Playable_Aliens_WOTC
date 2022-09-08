@@ -201,7 +201,7 @@ static function array<X2DataTemplate> CreateTemplates()
 	//Templates.AddItem(PA_Entwine());
 	Templates.AddItem(PABurningPinions());
 	Templates.AddItem(TelekineticDelivery());
-	Templates.AddItem(CreateSwitchToRobotMPAbility());
+	Templates.AddItem(Create_PA_SwitchToRobotAbility());
 	Templates.AddItem(PurePassive('PA_RobotBattlesuit', "img:///UILibrary_PerkIcons.UIPerk_andromedon_robotbattlesuit"));
 
 	return Templates;
@@ -6059,61 +6059,140 @@ static function X2AbilityTemplate TelekineticDelivery()
 //!  NEED TO BE TESTED ASAP !!!!!!
 
 
-static function X2AbilityTemplate CreateSwitchToRobotMPAbility()
+static function X2AbilityTemplate Create_PA_SwitchToRobotAbility()
 {
-	local X2AbilityTemplate Template;
-	local X2AbilityTrigger_EventListener EventListener;
-	local X2Condition_UnitValue UnitValue;
-	local X2Effect_SetUnitValue SetUnitValEffect;
-	local X2Effect_SwitchToRobot SwitchToRobotEffect;
+	local X2AbilityTemplate					Template;
+	local X2AbilityTrigger_EventListener	EventListener;
+	local X2Condition_UnitValue				UnitValue;
+	local X2Effect_SetUnitValue				SetUnitValEffect;
+	local X2Effect_PA_SwitchToRobot		SwitchToRobotEffect;
 
-	`CREATE_X2ABILITY_TEMPLATE(Template, 'SwitchToRobotMP');
-	Template.IconImage = "img:///UILibrary_PerkIcons.UIPerk_andromedon_robotbattlesuit"; // TODO: This needs to be changed
-	Template.MP_PerkOverride = 'SwitchToRobot';
+	`CREATE_X2ABILITY_TEMPLATE(Template, 'SwitchToRobot_Reboot');
 
-	Template.bDontDisplayInAbilitySummary = true;
+	// setup
+	Template.IconImage = "img:///UILibrary_PerkIcons.UIPerk_andromedon_robotbattlesuit";
 	Template.AbilitySourceName = 'eAbilitySource_Standard';
 	Template.eAbilityIconBehaviorHUD = EAbilityIconBehavior_NeverShow;
-	Template.Hostility = eHostility_Neutral;
+	Template.Hostility = eHostility_Neutral;	
 
-	// This ability is only valid if there has not been another death explosion on the unit
+	Template.bDontDisplayInAbilitySummary = true;
+
 	UnitValue = new class'X2Condition_UnitValue';
-	UnitValue.AddCheckValue('InRobotMode', 1, eCheck_LessThan);
+	UnitValue.AddCheckValue('RandomReboot', 1, eCheck_LessThan);
 	Template.AbilityShooterConditions.AddItem(UnitValue);
 
-	// This ability fires when the Andromedon dies
 	EventListener = new class'X2AbilityTrigger_EventListener';
 	EventListener.ListenerData.Deferral = ELD_OnStateSubmitted;
-	EventListener.ListenerData.EventID = 'UnitDied';
+	EventListener.ListenerData.EventID = 'AndromedonToRobot';
 	EventListener.ListenerData.Filter = eFilter_Unit;
 	EventListener.ListenerData.EventFn = class'XComGameState_Ability'.static.AbilityTriggerEventListener_Self_VisualizeInGameState;
-	EventListener.ListenerData.Priority = 45; //This ability must get triggered after the rest of the on-death listeners (namely, after mind-control effects get removed)
+	EventListener.ListenerData.Priority = 42; //This ability must get triggered after the rest of the on-death listeners (namely, after mind-control effects get removed)
 	Template.AbilityTriggers.AddItem(EventListener);
 
-	// Targets the Andromedon unit so it can be replaced by the andromedon robot;
 	Template.AbilityTargetStyle = default.SelfTarget;
 
 	// Add dead eye to guarantee the explosion occurs
 	Template.AbilityToHitCalc = default.DeadEye;
 
-	// The target will now be turned into a robot
+	// Effect
+	// The target will now be turned into a cloned robot
 	SwitchToRobotEffect = new class'X2Effect_PA_SwitchToRobot';
-	SwitchToRobotEffect.UnitToSpawnName = 'AndromedonRobotMP';
 	SwitchToRobotEffect.BuildPersistentEffect(1);
 	Template.AddTargetEffect(SwitchToRobotEffect);
 
-	// Once this ability is fired, set the InRobotMode Unit Value so it will not happen again
+	// Once this ability is fired, set the RandomReboot Unit Value so it will not happen again
 	SetUnitValEffect = new class'X2Effect_SetUnitValue';
-	SetUnitValEffect.UnitName = 'InRobotMode';
+	SetUnitValEffect.UnitName = 'RandomReboot';
 	SetUnitValEffect.NewValueToSet = 1;
 	SetUnitValEffect.CleanupType = eCleanup_Never;
 	Template.AddTargetEffect(SetUnitValEffect);
 
+	// Visualization
 	Template.BuildNewGameStateFn = TypicalAbility_BuildGameState;
 	Template.BuildVisualizationFn = SwitchToRobot_BuildVisualization;
-	//Template.MergeVisualizationFn = SwitchToRobot_VisualizationActionMetadataInsert;
+	Template.MergeVisualizationFn = SwitchToRobot_VisualizationMerge;
+	Template.FrameAbilityCameraType = eCameraFraming_Never;
 
 	return Template;
+}
+
+simulated function SwitchToRobot_BuildVisualization(XComGameState VisualizeGameState)
+{
+	local XComGameStateContext_Ability			Context;
+	local XComGameStateHistory					History;
+	local VisualizationActionMetadata			EmptyTrack, SpawnedUnitTrack, DeadUnitTrack;
+	local XComGameState_Unit					SpawnedUnit, DeadUnit; 
+	local UnitValue								SpawnedUnitValue;
+	local X2Effect_PA_SwitchToRobot			SwitchToRobotEffect;
+	local XComGameState_Ability					AbilityState;
+	local X2AbilityTemplate						AbilityTemplate;
+	local X2Action_AndromedonRobotSpawn 		RobotSpawn;
+
+	Context = XComGameStateContext_Ability(VisualizeGameState.GetContext());
+	History = `XCOMHISTORY;
+
+	DeadUnit = XComGameState_Unit(VisualizeGameState.GetGameStateForObjectID(Context.InputContext.PrimaryTarget.ObjectID));
+		//`assert(DeadUnit != none);	//removed to stop potential CTD
+
+	DeadUnit.GetUnitValue(class'X2Effect_SpawnUnit'.default.SpawnedUnitValueName, SpawnedUnitValue);
+
+	// The Spawned unit should appear and play its change animation
+	DeadUnitTrack = EmptyTrack;
+	DeadUnitTrack.StateObject_OldState = DeadUnit;
+	DeadUnitTrack.StateObject_NewState = DeadUnitTrack.StateObject_OldState;
+	DeadUnitTrack.VisualizeActor = History.GetVisualizer(DeadUnit.ObjectID);
+
+	// The Spawned unit should appear and play its change animation
+	SpawnedUnitTrack = EmptyTrack;
+	SpawnedUnitTrack.StateObject_OldState = History.GetGameStateForObjectID(SpawnedUnitValue.fValue, eReturnType_Reference, VisualizeGameState.HistoryIndex);
+	SpawnedUnitTrack.StateObject_NewState = SpawnedUnitTrack.StateObject_OldState;
+	SpawnedUnit = XComGameState_Unit(SpawnedUnitTrack.StateObject_NewState);
+		//`assert(SpawnedUnit != none);	//removed to stop potential CTD
+	SpawnedUnitTrack.VisualizeActor = History.GetVisualizer(SpawnedUnit.ObjectID);
+
+	// Only first target effect if X2Effect_SwitchToRobot
+	SwitchToRobotEffect = X2Effect_PA_SwitchToRobot(Context.ResultContext.TargetEffectResults.Effects[0]);
+
+	if( SwitchToRobotEffect == none )
+	{
+		// This can happen due to replays. In replays, when moving Context visualizations forward the Context has not been fully filled in.
+		AbilityState = XComGameState_Ability(History.GetGameStateForObjectID(Context.InputContext.AbilityRef.ObjectID));
+		AbilityTemplate = AbilityState.GetMyTemplate();
+		SwitchToRobotEffect = X2Effect_PA_SwitchToRobot(AbilityTemplate.AbilityTargetEffects[0]);
+	}
+
+	if( SwitchToRobotEffect == none )
+	{
+		RobotSpawn = X2Action_AndromedonRobotSpawn(class'X2Action_AndromedonRobotSpawn'.static.AddToVisualizationTree(SpawnedUnitTrack, Context, true, none));
+		RobotSpawn.AndromedonUnit = XGUnit(`XCOMHISTORY.GetVisualizer(DeadUnit.ObjectID) );
+	}
+	else
+	{
+		//SwitchToRobotEffect.AddSpawnVisualizationsToTracks(Context, SpawnedUnit, SpawnedUnitTrack, DeadUnit, DeadUnitTrack);
+		//emptied that bit of code to here so it should always run ??
+		RobotSpawn = X2Action_AndromedonRobotSpawn(class'X2Action_AndromedonRobotSpawn'.static.AddToVisualizationTree(SpawnedUnitTrack, Context, true, none));
+		RobotSpawn.AndromedonUnit = XGUnit(`XCOMHISTORY.GetVisualizer(DeadUnit.ObjectID) );
+	}
+}
+
+//mostly copied from original ability as all this visualisation stuff goes above my head
+static function SwitchToRobot_VisualizationMerge(X2Action BuildTree, out X2Action VisualizationTree)
+{
+	local X2Action						DeathAction;		
+	local X2Action						BuildTreeStartNode, BuildTreeEndNode;	
+	local XComGameStateVisualizationMgr LocalVisualizationMgr;
+
+	LocalVisualizationMgr = `XCOMVISUALIZATIONMGR;
+
+	DeathAction = LocalVisualizationMgr.GetNodeOfType(VisualizationTree, class'X2Action_RebootRobot', none, BuildTree.Metadata.StateObjectRef.ObjectID);
+
+	BuildTreeStartNode = LocalVisualizationMgr.GetNodeOfType(BuildTree, class'X2Action_MarkerTreeInsertBegin');	
+	BuildTreeEndNode = LocalVisualizationMgr.GetNodeOfType(BuildTree, class'X2Action_MarkerTreeInsertEnd');
+
+	if (BuildTreeStartNode != none && BuildTreeEndNode != none && DeathAction != none)
+	{
+		LocalVisualizationMgr.InsertSubtree(BuildTreeStartNode, BuildTreeEndNode, DeathAction);
+	}
 }
 
 // For the robot
@@ -6125,7 +6204,6 @@ static function X2DataTemplate CreateBigDamnPunchMPAbility()
 	local X2Condition_UnitProperty UnitPropertyCondition;
 	local X2Effect_ApplyWeaponDamage PhysicalDamageEffect;
 	local X2AbilityMultiTarget_Radius RadiusMultiTarget;
-	//local X2Effect_Knockback KnockbackEffect;
 	local X2AbilityTarget_MovingMelee MeleeTarget;
 	local array<name> SkipExclusions;
 
