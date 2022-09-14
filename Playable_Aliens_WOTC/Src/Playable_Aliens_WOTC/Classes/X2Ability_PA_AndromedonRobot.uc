@@ -372,7 +372,6 @@ simulated function SwitchToRobot_BuildVisualization(XComGameState VisualizeGameS
 static function SwitchToRobot_VisualizationMerge(X2Action BuildTree, out X2Action VisualizationTree)
 {
 	local X2Action						DeathAction;		
-	local X2Action						BuildTreeStartNode, BuildTreeEndNode;	
 	local XComGameStateVisualizationMgr LocalVisualizationMgr;
 
 	LocalVisualizationMgr = `XCOMVISUALIZATIONMGR;
@@ -389,6 +388,3 @@ static function SwitchToRobot_VisualizationMerge(X2Action BuildTree, out X2Actio
 		LocalVisualizationMgr.InsertSubtree(BuildTreeStartNode, BuildTreeEndNode, DeathAction);
 	}
 }
-
-
-
