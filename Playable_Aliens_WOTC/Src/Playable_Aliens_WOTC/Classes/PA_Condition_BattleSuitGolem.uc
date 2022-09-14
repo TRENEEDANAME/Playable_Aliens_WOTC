@@ -1,5 +1,3 @@
-// This shit is for a busted ability, ignore it for now
-
 class PA_Condition_BattleSuitGolem extends X2Condition config(XComPlayableAdvent);
 
 var config array<name> IncludeTypes;
