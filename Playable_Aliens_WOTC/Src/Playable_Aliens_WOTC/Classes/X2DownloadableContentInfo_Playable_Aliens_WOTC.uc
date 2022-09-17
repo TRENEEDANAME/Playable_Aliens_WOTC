@@ -336,8 +336,16 @@ static function bool IsModActive(name ModName)
     return false;
 }
 
-	// static function bool IsModActive(name WOTCIridarWeaponOverhaulVanilla)
-	// if (class'X2DownloadableContentInfo_Playable_Aliens_WOTC'.static.IsModActive('WotC_Gameplay_GeneModding'))
-	// 	{
-	// 	CharTemplate.Tech.AddItem('IRI_SecondaryHeart');
-	// 	}
+static final function Check5TWO()
+{
+	local X2ItemTemplateManager ItemMgr;
+
+	if (IsModActive('WOTCIridarWeaponOverhaulVanilla'))
+		return;
+
+	ItemMgr = class'X2ItemTemplateManager'.static.GetItemTemplateManager();
+
+	AddTech('')
+	CopyWIOAttachmentAppearanceForWeapon('IRI_ArtilleryCannon_MG', ItemMgr);
+	CopyWIOAttachmentAppearanceForWeapon('IRI_ArtilleryCannon_BM', ItemMgr);
+}
