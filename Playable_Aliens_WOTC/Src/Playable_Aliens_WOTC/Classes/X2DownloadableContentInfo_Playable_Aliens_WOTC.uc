@@ -335,17 +335,3 @@ static function bool IsModActive(name ModName)
     }
     return false;
 }
-
-static final function Check5TWO()
-{
-	local X2ItemTemplateManager ItemMgr;
-
-	if (IsModActive('WOTCIridarWeaponOverhaulVanilla'))
-		return;
-
-	ItemMgr = class'X2ItemTemplateManager'.static.GetItemTemplateManager();
-
-	AddTech('')
-	CopyWIOAttachmentAppearanceForWeapon('IRI_ArtilleryCannon_MG', ItemMgr);
-	CopyWIOAttachmentAppearanceForWeapon('IRI_ArtilleryCannon_BM', ItemMgr);
-}
