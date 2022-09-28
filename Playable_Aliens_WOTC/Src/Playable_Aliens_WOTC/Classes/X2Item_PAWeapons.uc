@@ -1426,7 +1426,7 @@ static function X2DataTemplate CreateSectoid_Amp()
 
 	Template.ItemCat = 'weapon';
 	Template.DamageTypeTemplateName = 'Psi';
-	Template.WeaponCat = 'sectoidpsiamp';
+	Template.WeaponCat = 'PA_Sectoid_PsiAmp';
 	Template.WeaponTech = 'conventional';
 	Template.strImage = "img:///UILibrary_Common.ConvSecondaryWeapons.PsiAmp";
 	Template.EquipSound = "Psi_Amp_Equip";
@@ -1464,7 +1464,7 @@ static function X2DataTemplate CreateSectoid_Amp_MG()
 	Template.WeaponPanelImage = "_PsiAmp";                       // used by the UI. Probably determines iconview of the weapon.
 
 	Template.ItemCat = 'weapon';
-	Template.WeaponCat = 'sectoidpsiamp';
+	Template.WeaponCat = 'PA_Sectoid_PsiAmp';
 	Template.DamageTypeTemplateName = 'Psi';
 	Template.WeaponTech = 'magnetic';
 	Template.strImage = "img:///UILibrary_Common.MagSecondaryWeapons.MagPsiAmp";
@@ -1528,7 +1528,7 @@ static function X2DataTemplate CreateSectoid_Amp_BM()
 	Template.WeaponPanelImage = "_PsiAmp";                       // used by the UI. Probably determines iconview of the weapon.
 
 	Template.ItemCat = 'weapon';
-	Template.WeaponCat = 'sectoidpsiamp';
+	Template.WeaponCat = 'PA_Sectoid_PsiAmp';
 	Template.DamageTypeTemplateName = 'Psi';
 	Template.WeaponTech = 'beam';
 	Template.strImage = "img:///UILibrary_Common.BeamSecondaryWeapons.BeamPsiAmp";
