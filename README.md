@@ -39,17 +39,17 @@ The above are **hard requirements**, UNLESS they have a note specifying otherwis
 #### Optional and/or highy recommended mods
 
 - [UFOpedia & Bestiary](https://steamcommunity.com/sharedfiles/filedetails/?id=2819129273)
-- [[WOTC] Choose Your Aliens](https://steamcommunity.com/sharedfiles/filedetails/?id=1782917748) - A fantastic MCM (and config) based mod that allows you to completely disable a specific alien from appearing in your game. As we use quite a lot of custom alien added abilities, this is a perfect want to make our mod function properly without actually having the enemy alien unit show up in your campaigns. If for whatever reason, you dislike certain enemy units appearing etc.
-- [[WOTC] Iridar's Five Tier Weapon Overhaul - Vanilla Balance](https://steamcommunity.com/sharedfiles/filedetails/?id=2406120902) - In short...the original mod was setup for 5 tiers using LWOTC setup. Innately, we have the mod setup for vanilla and ALSO functionality to use this mod. Recommended if you want to smooth out power creep from convetional to beam tier.
+- [[WOTC] Choose Your Aliens](https://steamcommunity.com/sharedfiles/filedetails/?id=1782917748) - A MCM (and config) based mod that allows you to completely disable a specific alien from appearing in your game. As we use quite a lot of custom alien added abilities, this is a perfect want to make our mod function properly without actually having the enemy alien unit show up in your campaigns. If for whatever reason, you dislike certain enemy units appearing etc.
+- [[WOTC] Iridar's Five Tier Weapon Overhaul - Vanilla Balance](https://steamcommunity.com/sharedfiles/filedetails/?id=2406120902) - In short...the original mod was setup for 5 tiers using LWOTC setup. Innately, we have the mod setup for vanilla and ALSO to use this mod.
 - [[WotC] UI - Colored Weapon Tiers](https://steamcommunity.com/sharedfiles/filedetails/?id=1949328656) - Gives all weapons tiers from CV - BEAM suitable colours like a RPG loot game, it's a great way to instantly see what's a more powerful version of a weapon/item/armour amidst 100s of modded items you may have. The config we use/have bundled has a lot of things setup already, so use our config if you want built in support. If you want to change the colours of items, use a hex colour code website and or look at the config for help
 
 ## FAQ
 
 ### Why not post the "ready to use" version of the mod ?
-Because it allows you to change the source code and compile the mod as you see fit. If enough people ask, I will release the proper mod to github as well.
+Because it allows you to change the source code and compile the mod as you see fit. If enough people ask, We will release the proper mod to github as well.
 
-### Can I do mod requests and bug reports ?
-**YES**, you can. You can even make pull request if you know what you are doing.
+### Can I do pull requests ?
+**YES**, you can, you can open issues, pull request, discussions...
 
 ### Can I fork it ?
 Yes you can, just credit the original author (Kiruka), Krakenous and me.
