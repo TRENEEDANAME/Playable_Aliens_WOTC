@@ -23,6 +23,12 @@
     <Folder Include="Src\Playable_Aliens_WOTC\" />
     <Folder Include="Src\Playable_Aliens_WOTC\Classes\" />
     <Folder Include="Content\" />
+    <Folder Include="Config\000 Schematic\" />
+    <Folder Include="Config\001 Cost\" />
+    <Folder Include="Config\002 Archons\" />
+    <Folder Include="Config\003 Sectoid\" />
+    <Folder Include="Config\004 Viper\" />
+    <Folder Include="Config\005 Andromedon\" />
     <Content Include="Config\XComAbilityEditor.ini">
       <SubType>Content</SubType>
     </Content>
@@ -490,5 +496,12 @@
     <Content Include="Src\Playable_Aliens_WOTC\Classes\X2Ability_PA_AndromedonRobot.uc" />
     <Content Include="Src\Playable_Aliens_WOTC\Classes\X2Action_PA_AndromedonDeathAction.uc" />
     <Content Include="Src\Playable_Aliens_WOTC\Classes\X2Effect_PA_SwitchToRobot.uc" />
+    <Content Include="Config\XComRestrictUpgrades.ini" />
+    <Content Include="Config\000 Schematic\XcomTemplateCreator.ini" />
+    <Content Include="Config\001 Cost\XComTemplateEditor.ini" />
+    <Content Include="Config\002 Archons\XcomTemplateEditor.ini" />
+    <Content Include="Config\003 Sectoid\XcomTemplateEditor.ini" />
+    <Content Include="Config\004 Viper\XcomTemplateEditor.ini" />
+    <Content Include="Config\005 Andromedon\XcomTemplateEditor.ini" />
   </ItemGroup>
 </Project>
