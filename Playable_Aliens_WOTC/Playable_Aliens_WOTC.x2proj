@@ -29,6 +29,8 @@
     <Folder Include="Config\003 Sectoid\" />
     <Folder Include="Config\004 Viper\" />
     <Folder Include="Config\005 Andromedon\" />
+    <Folder Include="Config\006 Frost Legions\" />
+    <Folder Include="Config\007 Mutons\" />
     <Content Include="Config\XComAbilityEditor.ini">
       <SubType>Content</SubType>
     </Content>
@@ -125,19 +127,7 @@
     <Content Include="Content\PA_Muton_ANIM.upk">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Content\PA_Naja.upk">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Content\PA_Naja_ANIM.upk">
-      <SubType>Content</SubType>
-    </Content>
     <Content Include="Content\PA_Sectoid_Anim.upk">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Content\PA_SideWinder.upk">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Content\PA_Sidewinder_ANIM.upk">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Content\PA_VIPER_ANIM.upk">
@@ -231,9 +221,6 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Src\Playable_Aliens_WOTC\Classes\OPTC_ThrowGrenade.uc">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Src\Playable_Aliens_WOTC\Classes\PA_Condition_BattleSuitGolem.uc">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Src\Playable_Aliens_WOTC\Classes\PA_MoltCondition.uc">
@@ -352,9 +339,6 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Src\Playable_Aliens_WOTC\Classes\X2Item_PAArmors.uc">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Src\Playable_Aliens_WOTC\Classes\X2Item_PAWeapons.uc">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Src\Playable_Aliens_WOTC\Classes\X2StatusEffects_RipplingRifle.uc">
@@ -493,7 +477,6 @@
     <Content Include="Config\XComInfiltration.ini" />
     <Content Include="PublishedFileId.ID" />
     <Content Include="Config\XcomStrategyTuning.Ini" />
-    <Content Include="Src\Playable_Aliens_WOTC\Classes\X2Ability_PA_AndromedonRobot.uc" />
     <Content Include="Src\Playable_Aliens_WOTC\Classes\X2Action_PA_AndromedonDeathAction.uc" />
     <Content Include="Src\Playable_Aliens_WOTC\Classes\X2Effect_PA_SwitchToRobot.uc" />
     <Content Include="Config\XComRestrictUpgrades.ini" />
@@ -503,5 +486,7 @@
     <Content Include="Config\003 Sectoid\XcomTemplateEditor.ini" />
     <Content Include="Config\004 Viper\XcomTemplateEditor.ini" />
     <Content Include="Config\005 Andromedon\XcomTemplateEditor.ini" />
+    <Content Include="Config\006 Frost Legions\XcomTemplateEditor.ini" />
+    <Content Include="Config\007 Mutons\XcomTemplateEditor.ini" />
   </ItemGroup>
 </Project>
